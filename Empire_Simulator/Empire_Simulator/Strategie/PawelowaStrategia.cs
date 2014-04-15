@@ -29,9 +29,8 @@ namespace Empire_Simulator
         }
 
         /// <summary>
-        /// Na razie obsluguje zmiane statusu magazynu przez odjecie cotygodniowej wartosci stałej
-        /// zużywanej przez populacje w wartosci 10 kazdego z zasobow
-        /// wchodze do magazynu, jego slownika i w obniekcie zasobu zmieniam ilosc o -10
+        /// (w takiej prostej strategi przyjmuje ze kazda osoba wykorzystuje 1 kazdego surowca w wiosce, dodatkowo produkujac 2 surowca
+        /// ktory jest wydobywany w danej wiosce)
         /// </summary>
         /// <param name="magazyn"></param>
         /// <param name="potencjalWydobywczy"></param>
@@ -41,8 +40,11 @@ namespace Empire_Simulator
             //Dictionary<string, Zasob> stan = magazyn.pobierzStanMagazynu(); Jesli chcialbym pobierac stan magazynu zmieniac i wysylac do magazynu
             foreach (KeyValuePair<string, Zasob> pair in magazyn.pobierzStanMagazynu())
             {
-                
-                pair.Value.zmienIloscZasobu(-10);
+                if (potencjalWydobywczy.pobierzPotencjal().Contains(pair.Key))
+                {
+                    pair.Value.zmienIloscZasobu(2*liczbaLudnosci);//zmiana w zwiazku z potencjalem wydobywczym
+                }
+                pair.Value.zmienIloscZasobu(-(liczbaLudnosci)); // zmiana w zwiazku z populacja
             }
 
         }
