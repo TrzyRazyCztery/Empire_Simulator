@@ -55,13 +55,13 @@
     <Compile Include="Klasy\Zasob\LosowanieZasobu.cs" />
     <Compile Include="Interfejsy\StrategiaHandlarza.cs" />
     <Compile Include="Interfejsy\StrategiaOsady.cs" />
+    <Compile Include="Klasy\Zasob\LosowaniePotencjalu.cs" />
     <Compile Include="Klasy\Zasob\Zasob.cs" />
     <Compile Include="Strategie\PawelowaStrategia.cs" />
-    <Compile Include="Klasy\PotencjalWydobywczy.cs" />
+    <Compile Include="Klasy\Zasob\PotencjalWydobywczy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Klasy\Swiat.cs" />
     <Compile Include="Test.cs" />
-    <Compile Include="Klasy\Wydobycie.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

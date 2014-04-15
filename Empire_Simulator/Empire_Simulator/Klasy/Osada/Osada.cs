@@ -23,13 +23,14 @@ namespace Empire_Simulator
 
         //############################### KONSTRUKTOR #########################################
 
-        public Osada(StrategiaOsady strategia, string nazwa, Magazyn magazyn, Populacja populacja)
+        public Osada(StrategiaOsady strategia, string nazwa, Magazyn magazyn, Populacja populacja, PotencjalWydobywczy potencjalWydobywczy)
         {
             this.nazwa = nazwa;
             this.populacja = populacja;
             this.magazyn = magazyn;
             this.targ = new Targ(magazyn);
             this.strategia = strategia;
+            this.potencjalWydobywczy = potencjalWydobywczy;
         }
 
 
@@ -70,9 +71,10 @@ namespace Empire_Simulator
         override public string ToString()
         {
             return string.Format("Osada : {0} \n" +
+                                 "Wydobywa surowce: {3} \n" +
                                  "Zasoby:  \n" +
                                  "{1} \n" +
-                                 "populacja : {2}", this.nazwa, this.magazyn.ToString(), populacja.liczbaLudnosci().ToString());
+                                 "populacja : {2}", this.nazwa, this.magazyn.ToString(), populacja.liczbaLudnosci().ToString(), potencjalWydobywczy.ToString());
         }
 
     }

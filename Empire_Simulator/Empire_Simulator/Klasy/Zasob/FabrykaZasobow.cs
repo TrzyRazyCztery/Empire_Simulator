@@ -29,6 +29,8 @@ namespace Empire_Simulator
         // podobnie jak poprzednio tylko juz konkretne wartosci intowe ktore sa wagą zasobu ktory znajduje sie na liscie
         // utworzonych nazw zasobow na tym indeksie co jego waga
 
+        
+
 
         //############################################# METODY #############################################
         /// <summary>
@@ -51,6 +53,15 @@ namespace Empire_Simulator
             }
 
             return zasoby;
+        }
+
+        /// <summary>
+        /// zwraca liste ktorej uzywa losowanie potencjalu
+        /// </summary>
+        /// <returns></returns>
+        public List<string> listaZasobow()
+        {
+            return UTWORZONE_NAZWY_ZASOBOW;
         }
        
     }
