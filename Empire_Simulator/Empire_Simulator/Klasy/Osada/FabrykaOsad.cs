@@ -14,7 +14,7 @@ namespace Empire_Simulator
         // ################################# POLA ##########################################
 
         private static int LICZNIK_OSAD = 0; //Licznik osad jest stały i zwiekszany co utworzeie obiektu osady
-        private static readonly LosowanieZasobu LOSOWANIE_POPULACJI = new LosowanieZasobu(60, 100); 
+        private static readonly LosowanieZasobu LOSOWANIE_POPULACJI = new LosowanieZasobu(10, 30); 
         // LOSOWANIE_POPULACJI jest obiektem ktory jest w stanie wylosowac wartosc z zadanego przedziału
         private FabrykaZasobow fabrykaZasobow;
         // korzystamy z fabryki zasobów (wiecej w klasie fabryka zasobow)

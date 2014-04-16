@@ -17,9 +17,9 @@ namespace Empire_Simulator
         private static readonly List<string>          UTWORZONE_NAZWY_ZASOBOW = new List<string>(new[] { "Jedwab", "Mieso", "Drewno" });
         // Lista ktora na kolejnych indeksach ma nazwy zasobów
         private static readonly List<LosowanieZasobu> UTWORZONE_ILOSCI_ZASOBOW = new List<LosowanieZasobu>(
-                                                                         new[] { new LosowanieZasobu(20,60),
-                                                                                 new LosowanieZasobu(20,60), 
-                                                                                 new LosowanieZasobu(20,60), 
+                                                                         new[] { new LosowanieZasobu(10,60),
+                                                                                 new LosowanieZasobu(10,60), 
+                                                                                 new LosowanieZasobu(10,60), 
                                                                                 });
         // lista ktora  na indeksach ma obiekty potrafiace losowac ilosci zasobi z danego zakresu, jesli chce 
         // by mozliwosc wylosowania jedwabiu byla 1-10 to obiekt potrafiacy losowac z takiego przedzialu umieszczam
