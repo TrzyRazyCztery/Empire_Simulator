@@ -49,12 +49,6 @@ namespace Empire_Simulator
 
         }
 
-        public void aktualizujStanyMagazynowe2(Magazyn magazyn, PotencjalWydobywczy potencjalWydobywczy, int liczbaLudnosci)
-        {
-            foreach (KeyValuePair<string, Zasob> pair in magazyn.pobierzStanMagazynu())
-            {
-                pair.Value.zmienIloscZasobu(10);
-            }
-        }
+       
     }
 }
