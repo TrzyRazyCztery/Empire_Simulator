@@ -61,6 +61,13 @@ namespace Empire_Simulator
 
 
         //####################################### STRATEGIA HANDLU ######################################
+        /// <summary>
+        /// Obecna wymiana polega na tym ze handlarz wymienia sie z targiem porowno, tj rozladowuje swoje zasoby i sa
+        /// ladowane do magazynua potem z magazynu bierzemy surowiec ktorego jest najwiecej i ladujemy mu na woz
+        /// Pożadana strategia jest raczej inna, pozniewaz obecna jest strasznie trywialna.
+        /// </summary>
+        /// <param name="magazyn"></param>
+        /// <param name="handlarz"></param>
         public void wymianaTowaru(Magazyn magazyn, Handlarz handlarz)
         {
             KeyValuePair<string, Zasob> towarHandlarza = handlarz.zwrocWoz().rozladuj();

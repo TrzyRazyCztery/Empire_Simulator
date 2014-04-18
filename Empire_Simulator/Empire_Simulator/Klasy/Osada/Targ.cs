@@ -27,7 +27,10 @@ namespace Empire_Simulator
         }      
 
         //###################################### METODY ########################################
-
+        /// <summary>
+        /// wymiany uzywam ze strategi handlu
+        /// </summary>
+        /// <param name="handlarz"></param>
         public void WymianaTowaru(Handlarz handlarz)
         {
             strategia.wymianaTowaru(magazyn, handlarz);
