@@ -38,6 +38,11 @@ namespace Empire_Simulator
             return string.Format("{0} \n" +
                                  "{1}", this.nazwa, this.woz.ToString()); 
         }
+
+        public WozHandlarza zwrocWoz()
+        {
+            return woz;
+        }
         
     }
 }

@@ -17,9 +17,10 @@ namespace Empire_Simulator
 
         //################################## KONSTRUKTOR #################################
 
-        public FabrykaHandlarzy(StrategiaHandlarza strategia)
+        public FabrykaHandlarzy(StrategiaHandlarza strategia, int ladownosc)
         {
             this.strategia = strategia;
+            this.ladownoscHandlarzy = ladownosc;
         }
 
 
