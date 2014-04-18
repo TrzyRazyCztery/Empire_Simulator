@@ -12,12 +12,12 @@ namespace Empire_Simulator
     {
         //################################## POLA ########################################
         private static int LICZNIK_HANDLARZY = 0;
-        private StrategiaHandlarza strategia;
+        private IStrategiaHandlarza strategia;
         private int ladownoscHandlarzy;
 
         //################################## KONSTRUKTOR #################################
 
-        public FabrykaHandlarzy(StrategiaHandlarza strategia, int ladownosc)
+        public FabrykaHandlarzy(IStrategiaHandlarza strategia, int ladownosc)
         {
             this.strategia = strategia;
             this.ladownoscHandlarzy = ladownosc;

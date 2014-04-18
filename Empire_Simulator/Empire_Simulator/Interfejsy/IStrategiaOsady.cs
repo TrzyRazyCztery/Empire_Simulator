@@ -10,7 +10,7 @@ namespace Empire_Simulator
     /// Interfejs strategi osady wymusza metody których używa osada do zaktualizowania swojego statusu
     /// tj. stanow magazynowych i populacji, strategie bedą wymienne
     /// </summary>
-    interface StrategiaOsady
+    interface IStrategiaOsady
     {
         /// <summary>
         /// Aktualizacja statnu popoulacji polega na zwiekszeniu lub zmiejszeniu populacji

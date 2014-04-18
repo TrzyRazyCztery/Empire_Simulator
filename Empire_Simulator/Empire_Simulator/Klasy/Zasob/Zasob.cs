@@ -60,6 +60,10 @@ namespace Empire_Simulator
                 this.ilosc = ilosc + wartosc;
             }
         }
+        public int zwrocWageZasobu()
+        {
+            return this.waga;
+        }
 
 
 

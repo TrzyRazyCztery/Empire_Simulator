@@ -9,7 +9,7 @@ namespace Empire_Simulator
     /// <summary>
     /// Własna strategia implementujaca interfejs strategi osady 
     /// </summary>
-    class PawelowaStrategia : StrategiaOsady, StrategiaHandlu, StrategiaHandlarza
+    class PawelowaStrategia : IStrategiaOsady, IStrategiaHandlu, IStrategiaHandlarza
     {
         public void aktualizujStanPopulacji(Populacja populacja, Magazyn magazyn)
         {
@@ -56,6 +56,30 @@ namespace Empire_Simulator
         //######################################### STRATEGIA HANDLARZA #################################
         public void Handluj()
         {
+        }
+
+
+
+        //####################################### STRATEGIA HANDLU ######################################
+        public void wymianaTowaru(Magazyn magazyn, Handlarz handlarz)
+        {
+            KeyValuePair<string, Zasob> towarHandlarza = handlarz.zwrocWoz().rozladuj();
+            Dictionary<string, Zasob> stanMagazynu = magazyn.pobierzStanMagazynu();
+            Zasob towarDoMagazynu = stanMagazynu[towarHandlarza.Key];
+            
+            towarDoMagazynu.zmienIloscZasobu(towarHandlarza.Value.iloscZasobu());
+
+            KeyValuePair<string, Zasob> towarZMagazynu = new KeyValuePair<string,Zasob>( "", new Zasob("", 0,0));
+            foreach( KeyValuePair<string, Zasob> para in stanMagazynu){
+                if(para.Value.iloscZasobu() > towarZMagazynu.Value.iloscZasobu()){
+                    towarZMagazynu = para;
+                }
+            }
+            towarZMagazynu.Value.zmienIloscZasobu(-towarHandlarza.Value.iloscZasobu());
+            handlarz.zwrocWoz().laduj(new KeyValuePair<string,Zasob>(towarZMagazynu.Key, new Zasob(towarZMagazynu.Key, towarHandlarza.Value.iloscZasobu(), towarZMagazynu.Value.zwrocWageZasobu())));
+
+
+
         }
 
        

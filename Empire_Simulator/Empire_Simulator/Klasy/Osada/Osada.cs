@@ -17,18 +17,18 @@ namespace Empire_Simulator
         private Magazyn magazyn; 
         private Targ targ; 
         private Populacja populacja; 
-        private StrategiaOsady strategia;
+        private IStrategiaOsady strategia;
         private string nazwa;
         private PotencjalWydobywczy potencjalWydobywczy;
 
         //############################### KONSTRUKTOR #########################################
 
-        public Osada(StrategiaOsady strategia, string nazwa, Magazyn magazyn, Populacja populacja, PotencjalWydobywczy potencjalWydobywczy)
+        public Osada(IStrategiaOsady strategia,IStrategiaHandlu strategiaHandlu, string nazwa, Magazyn magazyn, Populacja populacja, PotencjalWydobywczy potencjalWydobywczy)
         {
             this.nazwa = nazwa;
             this.populacja = populacja;
             this.magazyn = magazyn;
-            this.targ = new Targ(magazyn);
+            this.targ = new Targ(magazyn, strategiaHandlu);
             this.strategia = strategia;
             this.potencjalWydobywczy = potencjalWydobywczy;
         }

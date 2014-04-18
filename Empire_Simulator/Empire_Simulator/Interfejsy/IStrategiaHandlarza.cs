@@ -6,7 +6,7 @@ using System.Threading;
 
 namespace Empire_Simulator
 {
-    interface StrategiaHandlarza
+    interface IStrategiaHandlarza
     {
     }
 }

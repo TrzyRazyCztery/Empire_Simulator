@@ -14,21 +14,29 @@ namespace Empire_Simulator
         // #################################### POLA #########################################
        
         private Magazyn magazyn;
-        private StrategiaHandlu strategia;
+        private IStrategiaHandlu strategia;
 
         //##################################### KONSTRUKTOR #################################
        
 
 
-        public Targ(Magazyn magazyn)
+        public Targ(Magazyn magazyn, IStrategiaHandlu strategia)
         {
+            this.strategia = strategia;
             this.magazyn = magazyn;
         }      
 
         //###################################### METODY ########################################
 
-        public void Handluj(Handlarz handlarz)
+        public void WymianaTowaru(Handlarz handlarz)
         {
-        }  
+            strategia.wymianaTowaru(magazyn, handlarz);
+        }
+        
+
+
+
+            
+         
     }
 }

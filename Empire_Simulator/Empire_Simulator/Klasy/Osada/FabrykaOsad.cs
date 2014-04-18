@@ -18,14 +18,15 @@ namespace Empire_Simulator
         // LOSOWANIE_POPULACJI jest obiektem ktory jest w stanie wylosowac wartosc z zadanego przedziału
         private FabrykaZasobow fabrykaZasobow;
         // korzystamy z fabryki zasobów (wiecej w klasie fabryka zasobow)
-        private StrategiaOsady strategiaOsady;//implementujemy konkretna strategie osady o interfejsie "strategiaOsady"
-
+        private IStrategiaOsady strategiaOsady;//implementujemy konkretna strategie osady o interfejsie "strategiaOsady"
+        private IStrategiaHandlu strategiaHandlu;
 
         //################################## KONSTRUKTOR ####################################
 
-        public FabrykaOsad(FabrykaZasobow fabrykaZasobow, StrategiaOsady strategiaOsady){
+        public FabrykaOsad(FabrykaZasobow fabrykaZasobow, IStrategiaOsady strategiaOsady, IStrategiaHandlu strategiaHandlu){
             this.fabrykaZasobow = fabrykaZasobow;
             this.strategiaOsady = strategiaOsady;
+            this.strategiaHandlu = strategiaHandlu;
         }
 
         //################################## METODY #############################################
@@ -49,7 +50,7 @@ namespace Empire_Simulator
             }
 
             //Tworze i zwracam konkretny obiekt osady na podstawie wczesniej wygenerowanych danych
-            return new Osada(strategiaOsady, nastepnaNazwa(), new Magazyn(zasobyOsady), losowaPopulacja(), potencjalWioski.generujPotencjal());
+            return new Osada(strategiaOsady, strategiaHandlu, nastepnaNazwa(), new Magazyn(zasobyOsady), losowaPopulacja(), potencjalWioski.generujPotencjal());
         }
 
         /// <summary>

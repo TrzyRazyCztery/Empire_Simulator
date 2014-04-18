@@ -5,8 +5,8 @@ using System.Text;
 
 namespace Empire_Simulator
 {
-    interface StrategiaHandlu
+    interface IStrategiaHandlu
     {
-        void Handluj();
+        void wymianaTowaru(Magazyn magazyn, Handlarz handlarz);
     }
 }

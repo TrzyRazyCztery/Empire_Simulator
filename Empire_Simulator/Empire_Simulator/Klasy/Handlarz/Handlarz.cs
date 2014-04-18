@@ -10,12 +10,12 @@ namespace Empire_Simulator
     {
         //####################################### POLA #####################################
         private WozHandlarza woz;
-        private StrategiaHandlarza aktualnaStrategia;
+        private IStrategiaHandlarza aktualnaStrategia;
         private string nazwa;
 
         //####################################### KONSTRUKTOR ##############################
 
-        public Handlarz(StrategiaHandlarza strategia, int ladownoscWozu, string nazwa)
+        public Handlarz(IStrategiaHandlarza strategia, int ladownoscWozu, string nazwa)
         {
             woz = new WozHandlarza(ladownoscWozu);
             this.aktualnaStrategia = strategia;
