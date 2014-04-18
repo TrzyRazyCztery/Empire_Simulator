@@ -9,7 +9,7 @@ namespace Empire_Simulator
     /// <summary>
     /// Własna strategia implementujaca interfejs strategi osady 
     /// </summary>
-    class PawelowaStrategia : StrategiaOsady
+    class PawelowaStrategia : StrategiaOsady, StrategiaHandlu, StrategiaHandlarza
     {
         public void aktualizujStanPopulacji(Populacja populacja, Magazyn magazyn)
         {
@@ -47,6 +47,15 @@ namespace Empire_Simulator
                 pair.Value.zmienIloscZasobu(-(liczbaLudnosci)); // zmiana w zwiazku z populacja
             }
 
+        }
+
+
+
+
+
+        //######################################### STRATEGIA HANDLARZA #################################
+        public void Handluj()
+        {
         }
 
        

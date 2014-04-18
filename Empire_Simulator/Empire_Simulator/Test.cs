@@ -11,7 +11,8 @@ namespace Empire_Simulator
         static void Main(string[] args)
         {
             FabrykaZasobow a = new FabrykaZasobow();
-            FabrykaOsad sampleFabryka = new FabrykaOsad(a, new PawelowaStrategia());
+            PawelowaStrategia strategia = new PawelowaStrategia();
+            FabrykaOsad sampleFabryka = new FabrykaOsad(a, strategia);
             Osada sampleOsada = sampleFabryka.losujOsade();
 
             Console.WriteLine(sampleOsada.ToString());
@@ -33,6 +34,14 @@ namespace Empire_Simulator
             Console.WriteLine(" ");
             sampleOsada.aktualizuj();
             Console.WriteLine(sampleOsada.ToString());
+
+            FabrykaHandlarzy fH = new FabrykaHandlarzy(strategia);
+
+            Handlarz h1 = fH.generujHandlarza();
+            Handlarz h2 = fH.generujHandlarza();
+
+            Console.WriteLine(h1.ToString());
+            Console.WriteLine(h2.ToString());
 
            
             

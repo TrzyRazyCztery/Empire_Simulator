@@ -45,7 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Klasy\Handlarz.cs" />
+    <Compile Include="Interfejsy\StrategiaHandlu.cs" />
+    <Compile Include="Klasy\Handlarz\FabrykaHandlarzy.cs" />
+    <Compile Include="Klasy\Handlarz\Handlarz.cs" />
+    <Compile Include="Klasy\Handlarz\WozHandlarza.cs" />
     <Compile Include="Klasy\Osada\FabrykaOsad.cs" />
     <Compile Include="Klasy\Osada\Magazyn.cs" />
     <Compile Include="Klasy\Osada\Osada.cs" />

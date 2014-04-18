@@ -14,7 +14,7 @@ namespace Empire_Simulator
         // #################################### POLA #########################################
        
         private Magazyn magazyn;
-
+        private StrategiaHandlu strategia;
 
         //##################################### KONSTRUKTOR #################################
        
@@ -26,5 +26,9 @@ namespace Empire_Simulator
         }      
 
         //###################################### METODY ########################################
+
+        public void Handluj(Handlarz handlarz)
+        {
+        }  
     }
 }
