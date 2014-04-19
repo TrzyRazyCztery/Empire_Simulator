@@ -36,30 +36,44 @@ namespace Empire_Simulator
             Console.WriteLine(sampleOsada2.ToString());
             Console.WriteLine(sampleOsada3.ToString());
            
+            
             for (int i = 0; i <= 10; i++)
             {
                 sampleOsada.aktualizuj();
                 sampleOsada2.aktualizuj();
                 sampleOsada3.aktualizuj();
                 sampleOsada.Targowisko().WymianaTowaru(h1);
-                sampleOsada.Targowisko().WymianaTowaru(h2);
-                sampleOsada.Targowisko().WymianaTowaru(h3);
+                sampleOsada2.Targowisko().WymianaTowaru(h2);
+                sampleOsada3.Targowisko().WymianaTowaru(h3);
+                
                 sampleOsada.aktualizuj();
                 sampleOsada2.aktualizuj();
                 sampleOsada3.aktualizuj();
                 sampleOsada.Targowisko().WymianaTowaru(h3);
-                sampleOsada.Targowisko().WymianaTowaru(h1);
-                sampleOsada.Targowisko().WymianaTowaru(h2);
+                sampleOsada2.Targowisko().WymianaTowaru(h1);
+                sampleOsada3.Targowisko().WymianaTowaru(h2);
+             
+            }
+            Console.WriteLine("\n\n Po aktualizacji \n\n");
+            Console.WriteLine(sampleOsada.ToString());
+            Console.WriteLine(sampleOsada2.ToString());
+            Console.WriteLine(sampleOsada3.ToString());
+            for (int i = 0; i <= 80; i++)
+            {
                 sampleOsada.aktualizuj();
                 sampleOsada2.aktualizuj();
                 sampleOsada3.aktualizuj();
-                sampleOsada.Targowisko().WymianaTowaru(h2);
-                sampleOsada.Targowisko().WymianaTowaru(h3);
                 sampleOsada.Targowisko().WymianaTowaru(h1);
-                Console.WriteLine("\n\n Po aktualizacji \n\n");
-                Console.WriteLine(sampleOsada.ToString());
-                Console.WriteLine(sampleOsada2.ToString());
-                Console.WriteLine(sampleOsada3.ToString());
+                sampleOsada2.Targowisko().WymianaTowaru(h2);
+                sampleOsada3.Targowisko().WymianaTowaru(h3);
+
+                sampleOsada.aktualizuj();
+                sampleOsada2.aktualizuj();
+                sampleOsada3.aktualizuj();
+                sampleOsada.Targowisko().WymianaTowaru(h3);
+                sampleOsada2.Targowisko().WymianaTowaru(h1);
+                sampleOsada3.Targowisko().WymianaTowaru(h2);
+
             }
             Console.WriteLine("\n\n Po aktualizacji \n\n");
             Console.WriteLine(sampleOsada.ToString());

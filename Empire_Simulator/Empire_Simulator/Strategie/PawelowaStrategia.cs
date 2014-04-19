@@ -18,7 +18,7 @@ namespace Empire_Simulator
             // prosta strategia, jesli wszystkie produkty sa powyzej 10 zwiekszamy populacje o 10
             // jesli mamy 0 jakiegos zasobu zmniejszamy populacje o 10
             foreach(KeyValuePair<string, Zasob> para in magazyn.pobierzStanMagazynu()){
-                if (para.Value.iloscZasobu() < 10) { warunekZwiekszenia = 0;}
+                if (para.Value.iloscZasobu() < 30) { warunekZwiekszenia = 0;}
                 if (para.Value.iloscZasobu() == 0) { warunekZmniejszenia = 1;}
             }
             if (warunekZmniejszenia == 1){populacja.zmienLiczbeLudnosci(-10);}
@@ -42,7 +42,7 @@ namespace Empire_Simulator
             {
                 if (potencjalWydobywczy.pobierzPotencjal().Contains(pair.Key))
                 {
-                    pair.Value.zmienIloscZasobu(2*liczbaLudnosci);//zmiana w zwiazku z potencjalem wydobywczym
+                    pair.Value.zmienIloscZasobu(3*liczbaLudnosci);//zmiana w zwiazku z potencjalem wydobywczym
                 }
                 pair.Value.zmienIloscZasobu(-(liczbaLudnosci)); // zmiana w zwiazku z populacja
             }
