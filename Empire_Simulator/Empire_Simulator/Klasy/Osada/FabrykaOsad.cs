@@ -41,7 +41,7 @@ namespace Empire_Simulator
             // słownik przechowujący zasoby osady
             List<Zasob> zasoby = fabrykaZasobow.tworzenieZasobow();
             //lista obiektów typu "zasob" wygenerowana przesz fabrykę zasobów"
-            LosowaniePotencjalu potencjalWioski = new LosowaniePotencjalu(fabrykaZasobow.listaZasobow(), 2);
+            LosowaniePotencjalu potencjalWioski = new LosowaniePotencjalu(fabrykaZasobow.listaZasobow(), 1);
             
             foreach(Zasob zasob in zasoby) 
             {

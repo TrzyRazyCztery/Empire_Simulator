@@ -46,11 +46,12 @@ namespace Empire_Simulator
         /// </summary>
         private void losujZasoby()
         {
+            List<string> listaDostepnychZasobow2 = listaDostepnychZasobow.ToList();
             for (int i = 1; i <= this.ileLosowac; i++)
             {
-                int wygenerowanyIndeks = generator.Next(listaDostepnychZasobow.Count);
-                listaWylosowanychZasobow.Add(listaDostepnychZasobow.ElementAt(wygenerowanyIndeks));
-                listaDostepnychZasobow.RemoveAt(wygenerowanyIndeks);
+                int wygenerowanyIndeks = generator.Next(listaDostepnychZasobow2.Count);
+                listaWylosowanychZasobow.Add(listaDostepnychZasobow2.ElementAt(wygenerowanyIndeks));
+                listaDostepnychZasobow2.RemoveAt(wygenerowanyIndeks);
                 
             }
         }
