@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using System.Windows;
 
 namespace Empire_Simulator
 {
@@ -14,7 +15,9 @@ namespace Empire_Simulator
         // ################################# POLA ##########################################
 
         private static int LICZNIK_OSAD = 0; //Licznik osad jest stały i zwiekszany co utworzeie obiektu osady
+        private static List<Point> POZYCJE_OSAD = new List<Point>();
         private static readonly LosowanieZasobu LOSOWANIE_POPULACJI = new LosowanieZasobu(10, 30); 
+        private static readonly LosowanieZasobu LOSOWANIE_POZYCJI = new LosowanieZasobu(0,1000);
         // LOSOWANIE_POPULACJI jest obiektem ktory jest w stanie wylosowac wartosc z zadanego przedziału
         private FabrykaZasobow fabrykaZasobow;
         // korzystamy z fabryki zasobów (wiecej w klasie fabryka zasobow)
@@ -50,7 +53,13 @@ namespace Empire_Simulator
             }
 
             //Tworze i zwracam konkretny obiekt osady na podstawie wczesniej wygenerowanych danych
-            return new Osada(strategiaOsady, strategiaHandlu, nastepnaNazwa(), new Magazyn(zasobyOsady), losowaPopulacja(), potencjalWioski.generujPotencjal());
+            return new Osada(strategiaOsady, 
+                            strategiaHandlu, 
+                            nastepnaNazwa(), 
+                            new Magazyn(zasobyOsady), 
+                            losowaPopulacja(), 
+                            potencjalWioski.generujPotencjal(), 
+                            losujPozycje());
         }
 
         /// <summary>
@@ -73,6 +82,39 @@ namespace Empire_Simulator
             LICZNIK_OSAD += 1;
             return string.Format("Osada {0}", LICZNIK_OSAD);
         }
+
+
+        /// <summary>
+        /// losuje pozycje (korzystajac z modulu losujacego zasoby)  i sprawdza czy wektor dzielacy wylosowana 
+        /// pozycje od wszystkich osad ktore posiadam jest dluzszy od 100, co zapewni mi to ze nie
+        /// wylosuje wioski jednej zaraz obok drugiej.
+        /// </summary>
+        /// <returns></returns>
+        private Point losujPozycje()
+        {
+
+            while (true)
+            {
+                Point pozycja = new Point(LOSOWANIE_POZYCJI.losujZasob(), LOSOWANIE_POZYCJI.losujZasob());
+                bool zaBlisko = false;
+                foreach (Point pozycjaOsady in POZYCJE_OSAD)
+                {
+                    if (Point.Subtract(pozycjaOsady, pozycja).Length < 100)
+                    {
+                        zaBlisko = true;
+                        break;
+                    }
+                }
+                if (zaBlisko)
+                {
+                    continue;
+                }
+                return pozycja;
+            }
+        }
+                    
+
+
     }
 
 

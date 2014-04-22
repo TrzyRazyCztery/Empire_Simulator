@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using System.Windows;
 
 namespace Empire_Simulator
 {
@@ -13,7 +14,7 @@ namespace Empire_Simulator
     {
 
         //################################ POLA ###########################################
-
+        private Point pozycja;
         private Magazyn magazyn; 
         private Targ targ; 
         private Populacja populacja; 
@@ -23,7 +24,13 @@ namespace Empire_Simulator
 
         //############################### KONSTRUKTOR #########################################
 
-        public Osada(IStrategiaOsady strategia,IStrategiaHandlu strategiaHandlu, string nazwa, Magazyn magazyn, Populacja populacja, PotencjalWydobywczy potencjalWydobywczy)
+        public Osada(IStrategiaOsady strategia,
+                    IStrategiaHandlu strategiaHandlu, 
+                    string nazwa, 
+                    Magazyn magazyn, 
+                    Populacja populacja, 
+                    PotencjalWydobywczy potencjalWydobywczy, 
+                    Point pozycja)
         {
             this.nazwa = nazwa;
             this.populacja = populacja;
@@ -31,6 +38,7 @@ namespace Empire_Simulator
             this.targ = new Targ(magazyn, strategiaHandlu);
             this.strategia = strategia;
             this.potencjalWydobywczy = potencjalWydobywczy;
+            this.pozycja = pozycja;
         }
 
 
@@ -71,10 +79,10 @@ namespace Empire_Simulator
         override public string ToString()
         {
             return string.Format("Osada : {0} \n" +
+                                 "{4} \n"+
                                  "Wydobywa surowce: {3} \n" +
-                                 "Zasoby:  \n" +
                                  "{1} \n" +
-                                 "populacja : {2}", this.nazwa, this.magazyn.ToString(), populacja.liczbaLudnosci().ToString(), potencjalWydobywczy.ToString());
+                                 "populacja : {2}", this.nazwa, this.magazyn.ToString(), populacja.liczbaLudnosci().ToString(), potencjalWydobywczy.ToString(), pozycja.ToString());
         }
 
     }
