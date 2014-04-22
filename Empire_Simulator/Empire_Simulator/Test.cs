@@ -10,75 +10,43 @@ namespace Empire_Simulator
     {
         static void Main(string[] args)
         {
-            FabrykaZasobow a = new FabrykaZasobow();
-            PawelowaStrategia strategiaOsady = new PawelowaStrategia();
-            FabrykaOsad sampleFabryka = new FabrykaOsad(a, strategiaOsady, strategiaOsady);
-            Osada sampleOsada = sampleFabryka.losujOsade();
-            Osada sampleOsada2 = sampleFabryka.losujOsade();
-            Osada sampleOsada3 = sampleFabryka.losujOsade();
-            Osada sampleOsada4 = sampleFabryka.losujOsade();
-       
-            FabrykaHandlarzy fH = new FabrykaHandlarzy(strategiaOsady, 80);
+            FabrykaZasobow przykladowaFabrykaZasobow = new FabrykaZasobow();
+            
 
-            Handlarz h1 = fH.generujHandlarza();
-            Handlarz h2 = fH.generujHandlarza();
-            Handlarz h3 = fH.generujHandlarza();
+            PodstawowaStrategiaOsady strategiaOsady = new PodstawowaStrategiaOsady();
+            PodstawowaStrategiaHandlu strategiaHandlu = new PodstawowaStrategiaHandlu();
+            
+            FabrykaOsad przykladowaFabrykaOsad = new FabrykaOsad(przykladowaFabrykaZasobow, strategiaOsady, strategiaHandlu);
+            List<Osada> listaOsad = new List<Osada>();
+            for (int i = 0; i <= 4; i++)
+            {
+                listaOsad.Add(przykladowaFabrykaOsad.losujOsade());
+            }
+            
+            PodstawowaStrategiaHandlarza strategiaHandlarza = new PodstawowaStrategiaHandlarza(listaOsad);
+
+            Handlarz przykladowyHandlarz = new Handlarz(strategiaHandlarza, 80, "Andrzej");
+            przykladowyHandlarz.zwrocWoz().laduj(new KeyValuePair<string,Zasob>("Drewno", new Zasob("Drewno", 40, 20)));
+            Handlarz przykladowyHandlarz2 = new Handlarz(strategiaHandlarza, 80, "Tomasz");
+            przykladowyHandlarz2.zwrocWoz().laduj(new KeyValuePair<string, Zasob>("Jedwab", new Zasob("Jedwab", 40, 20)));
+
+            Handlarz przykladowyHandlarz3 = new Handlarz(strategiaHandlarza, 80, "Zdzislaw");
+            przykladowyHandlarz3.zwrocWoz().laduj(new KeyValuePair<string, Zasob>("Mieso", new Zasob("Mieso", 40, 20)));
+
+            foreach (Osada osada in listaOsad)
+            {
+                Console.WriteLine(osada.ToString() + "\n");
+            }
+            Console.WriteLine(przykladowyHandlarz.ToString());
+            Console.WriteLine(przykladowyHandlarz.WyznaczCelPodrozy().ToString());
+            Console.WriteLine(przykladowyHandlarz2.ToString());
+            Console.WriteLine(przykladowyHandlarz2.WyznaczCelPodrozy().ToString());
+            Console.WriteLine(przykladowyHandlarz3.ToString());
+            Console.WriteLine(przykladowyHandlarz3.WyznaczCelPodrozy().ToString());
+
 
             
-            KeyValuePair<string, Zasob> ladunek = new KeyValuePair<string,Zasob>("Mieso", new Zasob("Mieso", 40, 3));
-            KeyValuePair<string, Zasob> ladunek2 = new KeyValuePair<string, Zasob>("Jedwab", new Zasob("Jedwab",40, 5));
-            KeyValuePair<string, Zasob> ladunek3 = new KeyValuePair<string, Zasob>("Drewno", new Zasob("Drewno", 40, 5));
-
-            h1.zwrocWoz().laduj(ladunek);
-            h2.zwrocWoz().laduj(ladunek2);
-            h3.zwrocWoz().laduj(ladunek3);
-            Console.WriteLine(sampleOsada.ToString());
-            Console.WriteLine(sampleOsada2.ToString());
-            Console.WriteLine(sampleOsada3.ToString());
-           
             
-            for (int i = 0; i <= 10; i++)
-            {
-                sampleOsada.aktualizuj();
-                sampleOsada2.aktualizuj();
-                sampleOsada3.aktualizuj();
-                sampleOsada.Targowisko().WymianaTowaru(h1);
-                sampleOsada2.Targowisko().WymianaTowaru(h2);
-                sampleOsada3.Targowisko().WymianaTowaru(h3);
-                
-                sampleOsada.aktualizuj();
-                sampleOsada2.aktualizuj();
-                sampleOsada3.aktualizuj();
-                sampleOsada.Targowisko().WymianaTowaru(h3);
-                sampleOsada2.Targowisko().WymianaTowaru(h1);
-                sampleOsada3.Targowisko().WymianaTowaru(h2);
-             
-            }
-            Console.WriteLine("\n\n Po aktualizacji \n\n");
-            Console.WriteLine(sampleOsada.ToString());
-            Console.WriteLine(sampleOsada2.ToString());
-            Console.WriteLine(sampleOsada3.ToString());
-            for (int i = 0; i <= 80; i++)
-            {
-                sampleOsada.aktualizuj();
-                sampleOsada2.aktualizuj();
-                sampleOsada3.aktualizuj();
-                sampleOsada.Targowisko().WymianaTowaru(h1);
-                sampleOsada2.Targowisko().WymianaTowaru(h2);
-                sampleOsada3.Targowisko().WymianaTowaru(h3);
-
-                sampleOsada.aktualizuj();
-                sampleOsada2.aktualizuj();
-                sampleOsada3.aktualizuj();
-                sampleOsada.Targowisko().WymianaTowaru(h3);
-                sampleOsada2.Targowisko().WymianaTowaru(h1);
-                sampleOsada3.Targowisko().WymianaTowaru(h2);
-
-            }
-            Console.WriteLine("\n\n Po aktualizacji \n\n");
-            Console.WriteLine(sampleOsada.ToString());
-            Console.WriteLine(sampleOsada2.ToString());
-            Console.WriteLine(sampleOsada3.ToString());
             
             Console.ReadKey();
         }

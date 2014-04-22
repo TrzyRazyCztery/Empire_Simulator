@@ -63,10 +63,12 @@
     <Compile Include="Interfejsy\IStrategiaOsady.cs" />
     <Compile Include="Klasy\Zasob\LosowaniePotencjalu.cs" />
     <Compile Include="Klasy\Zasob\Zasob.cs" />
-    <Compile Include="Strategie\PawelowaStrategia.cs" />
+    <Compile Include="Strategie\PodstawowaStrategiaOsady.cs" />
     <Compile Include="Klasy\Zasob\PotencjalWydobywczy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Klasy\Swiat.cs" />
+    <Compile Include="Strategie\PodstawowaStrategiaHandlarza.cs" />
+    <Compile Include="Strategie\PodstawowaStrategiaHandlu.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="Wyjatki\ExcepotionBrakZasobu.cs" />
   </ItemGroup>

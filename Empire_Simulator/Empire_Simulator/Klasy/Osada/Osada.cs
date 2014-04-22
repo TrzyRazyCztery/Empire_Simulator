@@ -70,6 +70,10 @@ namespace Empire_Simulator
         {
             return magazyn;
         }
+        public Point pozycjaOsady()
+        {
+            return pozycja;
+        }
 
 
         //################################ METODY DO TESTOW #############################################

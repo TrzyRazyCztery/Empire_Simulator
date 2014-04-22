@@ -35,6 +35,11 @@ namespace Empire_Simulator
             return towar;
         }
 
+        public string NazwaPrzewozonegoZasobu()
+        {
+            return ladunek.FirstOrDefault().Value.nazwaZasobu();
+        }
+
 
         //Chyba bardziej do testow:
         public override string ToString()

@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using System.Windows;
 
 namespace Empire_Simulator
 {
     class Handlarz
     {
         //####################################### POLA #####################################
+        private Point pozycja;
         private WozHandlarza woz;
         private IStrategiaHandlarza aktualnaStrategia;
         private string nazwa;
@@ -17,7 +19,8 @@ namespace Empire_Simulator
 
         public Handlarz(IStrategiaHandlarza strategia, int ladownoscWozu, string nazwa)
         {
-            woz = new WozHandlarza(ladownoscWozu);
+            this.pozycja = new Point(500, 500);
+            this.woz = new WozHandlarza(ladownoscWozu);
             this.aktualnaStrategia = strategia;
             this.nazwa = nazwa;
 
@@ -29,6 +32,10 @@ namespace Empire_Simulator
         {
 
         }
+        public Point WyznaczCelPodrozy()
+        {
+            return aktualnaStrategia.WyznaczCelPodrozy(this);
+        }
 
 
         //#################################### METODY DO TESTOW ###############################
@@ -36,7 +43,8 @@ namespace Empire_Simulator
         public override string ToString()
         {
             return string.Format("{0} \n" +
-                                 "{1}", this.nazwa, this.woz.ToString()); 
+                                 "{2} \n" +
+                                 "{1}", this.nazwa, this.woz.ToString(), this.pozycja.ToString()); 
         }
 
         public WozHandlarza zwrocWoz()
