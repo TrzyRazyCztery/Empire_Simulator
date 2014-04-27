@@ -37,7 +37,10 @@ namespace Empire_Simulator
             for (int i = 0; i <= 30; i++)
             {
 
-                
+                foreach (Osada osada in listaOsad)
+                {
+                    osada.aktualizuj();
+                }
                 Console.WriteLine(przykladowyHandlarz.ToString());
                 przykladowyHandlarz.aktualizuj();
                 //Console.WriteLine(przykladowyHandlarz2.ToString());
