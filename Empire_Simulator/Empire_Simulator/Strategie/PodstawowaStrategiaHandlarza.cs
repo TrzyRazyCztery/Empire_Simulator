@@ -20,7 +20,7 @@ namespace Empire_Simulator
         /// <param name="handlarz"></param>
         /// <returns></returns>
 
-        public Point WyznaczCelPodrozy(Handlarz handlarz)
+        public Osada wyznaczCelPodrozy(Handlarz handlarz)
         {
             foreach (Osada osada in listaOsad)
             {
@@ -35,11 +35,34 @@ namespace Empire_Simulator
                 }
                 if (najmniej.nazwaZasobu().Equals(handlarz.zwrocWoz().NazwaPrzewozonegoZasobu()))
                 {
-                    return osada.pozycjaOsady();
+                    return osada;
                 }
             }
-            return listaOsad.FirstOrDefault().pozycjaOsady();
+            return listaOsad.FirstOrDefault();
         }
+
+
+        public Point podrozuj(Point pozycja, Point celPodrozy)
+        {
+            if (celPodrozy.X < pozycja.X)
+            {
+                pozycja.X = (pozycja.X - 50);
+            }
+            else
+            {
+                pozycja.X = (pozycja.X + 50);
+            }
+            if (celPodrozy.Y < pozycja.Y)
+            {
+                pozycja.Y = (pozycja.Y - 50);
+            }
+            else
+            {
+                pozycja.Y = (pozycja.Y + 50);
+            }
+            return pozycja;
+        }
+
 
     }
 }

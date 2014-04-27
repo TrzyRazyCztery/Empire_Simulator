@@ -16,7 +16,7 @@ namespace Empire_Simulator
         /// <param name="handlarz"></param>
         public void wymianaTowaru(Magazyn magazyn, Handlarz handlarz)
         {
-            KeyValuePair<string, Zasob> towarHandlarza = handlarz.zwrocWoz().rozladuj();
+            KeyValuePair<string, Zasob> towarHandlarza = handlarz.rozladujTowar();
             Dictionary<string, Zasob> stanMagazynu = magazyn.pobierzStanMagazynu();
             Zasob towarDoMagazynu = stanMagazynu[towarHandlarza.Key];
 
@@ -31,7 +31,7 @@ namespace Empire_Simulator
                 }
             }
             towarZMagazynu.Value.zmienIloscZasobu(-towarHandlarza.Value.iloscZasobu());
-            handlarz.zwrocWoz().laduj(new KeyValuePair<string, Zasob>(towarZMagazynu.Key, new Zasob(towarZMagazynu.Key, towarHandlarza.Value.iloscZasobu(), towarZMagazynu.Value.zwrocWageZasobu())));
+            handlarz.ladujTowar(new KeyValuePair<string, Zasob>(towarZMagazynu.Key, new Zasob(towarZMagazynu.Key, towarHandlarza.Value.iloscZasobu(), towarZMagazynu.Value.zwrocWageZasobu())));
 
 
 

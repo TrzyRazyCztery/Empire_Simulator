@@ -14,7 +14,7 @@ namespace Empire_Simulator
         private WozHandlarza woz;
         private IStrategiaHandlarza aktualnaStrategia;
         private string nazwa;
-
+        private Osada celPodrozy;
         //####################################### KONSTRUKTOR ##############################
 
         public Handlarz(IStrategiaHandlarza strategia, int ladownoscWozu, string nazwa)
@@ -27,16 +27,57 @@ namespace Empire_Simulator
         }
 
         //####################################### METODY #####################################
-
-        public void zamien()
+        
+        
+        /// <summary>
+        /// Wyznacza cel podróży na podstawie tego co ma na wozie i strategi handlarza
+        /// </summary>
+        /// <returns>obiekt osady do ktorej sie kieruje</returns>
+        public Osada WyznaczCelPodrozy()
         {
-
+            return aktualnaStrategia.wyznaczCelPodrozy(this);
         }
-        public Point WyznaczCelPodrozy()
+        /// <summary>
+        /// Zwraca to co ma na wozie (Czy to napewno dobry pomysl?)
+        /// lepiej chyba bedzie jesli kazda kominikacja z wozem bedzie
+        /// odbywala sie za pomoca handlarza
+        /// </summary>
+        /// <returns>obiekt wozu handlarza</returns>
+        
+        public WozHandlarza zwrocWoz()
         {
-            return aktualnaStrategia.WyznaczCelPodrozy(this);
+            return woz;
+        }
+        
+        /// <summary>
+        /// rozladowuje towar ze swjojego wozu
+        /// </summary>
+        /// <returns> para nazwy zasobu z zasobem</returns>
+        public KeyValuePair<string, Zasob> rozladujTowar()
+        {
+            return woz.rozladuj();
+        }
+        /// <summary>
+        /// laduje dany towar na woz
+        /// i ustala sobie na podstawie tego co zaladowal nowy cel podróży.
+        /// </summary>
+        /// <param name="towar"></param>
+        
+        public void ladujTowar(KeyValuePair<string, Zasob> towar)
+        {
+            woz.laduj(towar);
+            celPodrozy = WyznaczCelPodrozy();
         }
 
+
+        public void aktualizuj()
+        {
+            this.pozycja = aktualnaStrategia.podrozuj(pozycja, celPodrozy.pozycjaOsady());
+            if (Point.Subtract(pozycja, celPodrozy.pozycjaOsady()).Length <= 50)
+            {
+                celPodrozy.Targowisko().WymianaTowaru(this);
+            }
+        }
 
         //#################################### METODY DO TESTOW ###############################
 
@@ -47,10 +88,11 @@ namespace Empire_Simulator
                                  "{1}", this.nazwa, this.woz.ToString(), this.pozycja.ToString()); 
         }
 
-        public WozHandlarza zwrocWoz()
+        public void reczneUstawienieCelu(Osada osada)
         {
-            return woz;
+            this.celPodrozy = osada;
         }
-        
+
+      
     }
 }

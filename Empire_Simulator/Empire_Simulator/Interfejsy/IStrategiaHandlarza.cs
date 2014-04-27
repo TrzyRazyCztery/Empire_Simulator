@@ -9,6 +9,7 @@ namespace Empire_Simulator
 {
     interface IStrategiaHandlarza
     {
-        Point WyznaczCelPodrozy(Handlarz handlarz);
+        Osada wyznaczCelPodrozy(Handlarz handlarz);
+        Point podrozuj(Point pozycja, Point celPodrozy);
     }
 }

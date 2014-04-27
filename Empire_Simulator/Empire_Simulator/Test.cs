@@ -26,23 +26,23 @@ namespace Empire_Simulator
             PodstawowaStrategiaHandlarza strategiaHandlarza = new PodstawowaStrategiaHandlarza(listaOsad);
 
             Handlarz przykladowyHandlarz = new Handlarz(strategiaHandlarza, 80, "Andrzej");
-            przykladowyHandlarz.zwrocWoz().laduj(new KeyValuePair<string,Zasob>("Drewno", new Zasob("Drewno", 40, 20)));
+            przykladowyHandlarz.ladujTowar(new KeyValuePair<string,Zasob>("Drewno", new Zasob("Drewno", 40, 20)));
+            /*
             Handlarz przykladowyHandlarz2 = new Handlarz(strategiaHandlarza, 80, "Tomasz");
-            przykladowyHandlarz2.zwrocWoz().laduj(new KeyValuePair<string, Zasob>("Jedwab", new Zasob("Jedwab", 40, 20)));
-
-            Handlarz przykladowyHandlarz3 = new Handlarz(strategiaHandlarza, 80, "Zdzislaw");
-            przykladowyHandlarz3.zwrocWoz().laduj(new KeyValuePair<string, Zasob>("Mieso", new Zasob("Mieso", 40, 20)));
-
-            foreach (Osada osada in listaOsad)
+            przykladowyHandlarz2.ladujTowar(new KeyValuePair<string, Zasob>("Jedwab", new Zasob("Jedwab", 40, 20)));
+            */
+            przykladowyHandlarz.reczneUstawienieCelu(przykladowyHandlarz.WyznaczCelPodrozy());
+            //przykladowyHandlarz2.reczneUstawienieCelu(przykladowyHandlarz2.WyznaczCelPodrozy());
+            
+            for (int i = 0; i <= 30; i++)
             {
-                Console.WriteLine(osada.ToString() + "\n");
-            }
-            Console.WriteLine(przykladowyHandlarz.ToString());
-            Console.WriteLine(przykladowyHandlarz.WyznaczCelPodrozy().ToString());
-            Console.WriteLine(przykladowyHandlarz2.ToString());
-            Console.WriteLine(przykladowyHandlarz2.WyznaczCelPodrozy().ToString());
-            Console.WriteLine(przykladowyHandlarz3.ToString());
-            Console.WriteLine(przykladowyHandlarz3.WyznaczCelPodrozy().ToString());
+
+                
+                Console.WriteLine(przykladowyHandlarz.ToString());
+                przykladowyHandlarz.aktualizuj();
+                //Console.WriteLine(przykladowyHandlarz2.ToString());
+                //przykladowyHandlarz2.aktualizuj();
+            }    
 
 
             
