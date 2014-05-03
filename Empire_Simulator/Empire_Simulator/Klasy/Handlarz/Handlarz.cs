@@ -86,7 +86,8 @@ namespace Empire_Simulator
         {
             return string.Format("{0} \n" +
                                  "{2} \n" +
-                                 "{1}", this.nazwa, this.woz.ToString(), this.pozycja.ToString()); 
+                                 "{3} \n" +
+                                 "{1}", this.nazwa, this.woz.ToString(), this.pozycja.ToString(), this.celPodrozy.pozycjaOsady()); 
         }
 
         public void reczneUstawienieCelu(Osada osada)

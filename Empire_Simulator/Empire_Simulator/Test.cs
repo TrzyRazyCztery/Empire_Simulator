@@ -10,45 +10,18 @@ namespace Empire_Simulator
     {
         static void Main(string[] args)
         {
-            FabrykaZasobow przykladowaFabrykaZasobow = new FabrykaZasobow();
-            
+            GeneratorSwiata generatorSwiata = new GeneratorSwiata();
+            Swiat swiat = generatorSwiata.generujSwiat();
 
-            PodstawowaStrategiaOsady strategiaOsady = new PodstawowaStrategiaOsady();
-            PodstawowaStrategiaHandlu strategiaHandlu = new PodstawowaStrategiaHandlu();
-            
-            FabrykaOsad przykladowaFabrykaOsad = new FabrykaOsad(przykladowaFabrykaZasobow, strategiaOsady, strategiaHandlu);
-            List<Osada> listaOsad = new List<Osada>();
-            for (int i = 0; i <= 4; i++)
+            foreach (Osada osada in swiat.pobierzListeOsad())
             {
-                listaOsad.Add(przykladowaFabrykaOsad.losujOsade());
+                Console.WriteLine(osada.ToString());
             }
-            
-            PodstawowaStrategiaHandlarza strategiaHandlarza = new PodstawowaStrategiaHandlarza(listaOsad);
 
-            Handlarz przykladowyHandlarz = new Handlarz(strategiaHandlarza, 80, "Andrzej");
-            przykladowyHandlarz.ladujTowar(new KeyValuePair<string,Zasob>("Drewno", new Zasob("Drewno", 40, 20)));
-            /*
-            Handlarz przykladowyHandlarz2 = new Handlarz(strategiaHandlarza, 80, "Tomasz");
-            przykladowyHandlarz2.ladujTowar(new KeyValuePair<string, Zasob>("Jedwab", new Zasob("Jedwab", 40, 20)));
-            */
-            przykladowyHandlarz.reczneUstawienieCelu(przykladowyHandlarz.WyznaczCelPodrozy());
-            //przykladowyHandlarz2.reczneUstawienieCelu(przykladowyHandlarz2.WyznaczCelPodrozy());
-            
-            for (int i = 0; i <= 30; i++)
+            foreach (Handlarz handlarz in swiat.pobierzListeHandlarzy())
             {
-
-                foreach (Osada osada in listaOsad)
-                {
-                    osada.aktualizuj();
-                }
-                Console.WriteLine(przykladowyHandlarz.ToString());
-                przykladowyHandlarz.aktualizuj();
-                //Console.WriteLine(przykladowyHandlarz2.ToString());
-                //przykladowyHandlarz2.aktualizuj();
-            }    
-
-
-            
+                Console.WriteLine(handlarz.ToString());
+            }
             
             
             Console.ReadKey();

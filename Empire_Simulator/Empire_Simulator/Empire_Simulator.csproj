@@ -56,6 +56,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfejsy\IStrategiaGenerowaniaSwiata.cs" />
     <Compile Include="Interfejsy\IStrategiaHandlu.cs" />
     <Compile Include="Klasy\Handlarz\FabrykaHandlarzy.cs" />
     <Compile Include="Klasy\Handlarz\Handlarz.cs" />
@@ -65,16 +66,18 @@
     <Compile Include="Klasy\Osada\Osada.cs" />
     <Compile Include="Klasy\Osada\Populacja.cs" />
     <Compile Include="Klasy\Osada\Targ.cs" />
+    <Compile Include="Klasy\Swiat\GeneratorSwiata.cs" />
     <Compile Include="Klasy\Zasob\FabrykaZasobow.cs" />
     <Compile Include="Klasy\Zasob\LosowanieZasobu.cs" />
     <Compile Include="Interfejsy\IStrategiaHandlarza.cs" />
     <Compile Include="Interfejsy\IStrategiaOsady.cs" />
     <Compile Include="Klasy\Zasob\LosowaniePotencjalu.cs" />
     <Compile Include="Klasy\Zasob\Zasob.cs" />
+    <Compile Include="Strategie\PodstawowaStrategiaGenerowaniaSwiata.cs" />
     <Compile Include="Strategie\PodstawowaStrategiaOsady.cs" />
     <Compile Include="Klasy\Zasob\PotencjalWydobywczy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Klasy\Swiat.cs" />
+    <Compile Include="Klasy\Swiat\Swiat.cs" />
     <Compile Include="Strategie\PodstawowaStrategiaHandlarza.cs" />
     <Compile Include="Strategie\PodstawowaStrategiaHandlu.cs" />
     <Compile Include="Test.cs" />

@@ -28,6 +28,7 @@ namespace Empire_Simulator
 
         public Handlarz generujHandlarza()
         {
+            
             return new Handlarz(strategia, ladownoscHandlarzy, nastepnaNazwa());
         }
 

@@ -8,18 +8,18 @@ namespace Empire_Simulator
 {
     class Swiat
     {
-        private List<Osada> listOsad;
+        private List<Osada> listaOsad;
         private List<Handlarz> listaHandlarzy;
 
-        public Swiat()
+        public Swiat(List<Osada> listaOsad, List<Handlarz> listaHandlarzy)
         {
-            listaHandlarzy = new List<Handlarz>();
-            listOsad = new List<Osada>();
+            this.listaHandlarzy = listaHandlarzy;
+            this.listaOsad = listaOsad;
         }
 
         public void dodajOsade(Osada osada)
         {
-            this.listOsad.Add(osada);
+            this.listaOsad.Add(osada);
         }
 
         public void dodajHandlarza(Handlarz handlarz)
@@ -34,7 +34,7 @@ namespace Empire_Simulator
 
         public List<Osada> pobierzListeOsad()
         {
-            return listOsad;
+            return listaOsad;
         }
     }
 }
