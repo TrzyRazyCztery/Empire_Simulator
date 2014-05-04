@@ -58,6 +58,8 @@
   <ItemGroup>
     <Compile Include="Interfejsy\IStrategiaGenerowaniaSwiata.cs" />
     <Compile Include="Interfejsy\IStrategiaHandlu.cs" />
+    <Compile Include="Klasy\Aktualizacja\Delegaty\AktualizacjaHandlarzy.cs" />
+    <Compile Include="Klasy\Aktualizacja\Delegaty\AktualizacjaOsad.cs" />
     <Compile Include="Klasy\Handlarz\FabrykaHandlarzy.cs" />
     <Compile Include="Klasy\Handlarz\Handlarz.cs" />
     <Compile Include="Klasy\Handlarz\WozHandlarza.cs" />
@@ -86,6 +88,7 @@
   <ItemGroup>
     <None Include="app.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

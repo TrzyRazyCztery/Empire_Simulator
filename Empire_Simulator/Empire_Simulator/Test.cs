@@ -22,7 +22,24 @@ namespace Empire_Simulator
             {
                 Console.WriteLine(handlarz.ToString());
             }
-            
+            AktualizacjaHandlarzy aHandlarzy = new AktualizacjaHandlarzy(swiat.pobierzListeHandlarzy());
+            AktualizacjaOsad aOsad = new AktualizacjaOsad(swiat.pobierzListeOsad());
+
+            DelegatAktualizacjiHandlarzy a = aHandlarzy.pobierzGotowyDelegat();
+            DelegatAktualizacjiOsad b = aOsad.pobierzGotowyDelegat();
+            b();
+            a();
+            foreach (Osada osada in swiat.pobierzListeOsad())
+            {
+                Console.WriteLine(osada.ToString());
+            }
+
+            foreach (Handlarz handlarz in swiat.pobierzListeHandlarzy())
+            {
+                Console.WriteLine(handlarz.ToString());
+            }
+
+
             
             Console.ReadKey();
         }
