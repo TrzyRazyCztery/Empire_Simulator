@@ -12,13 +12,16 @@ namespace Empire_Simulator
         OknoGry okno;
         Swiat swiat;
         Dictionary<Osada, PictureBox> osadyNaMapie;
+        Dictionary<Handlarz, PictureBox> handlarzeNaMapie;
 
         public GeneratorMapy(Swiat swiat)
         {
             this.okno = new OknoGry();
             this.swiat = swiat;
             osadyNaMapie = new Dictionary<Osada,PictureBox>();
+            handlarzeNaMapie = new Dictionary<Handlarz, PictureBox>();
             dodajOsady();
+            dodajHandlarzy();
         }
         public void dodajLayout()
         {
@@ -30,6 +33,8 @@ namespace Empire_Simulator
             tloMapy.TabIndex = 0;
             tloMapy.TabStop = false;
             naniesOsadyNaMape(tloMapy);
+            naniesHandlarzyNaMape(tloMapy);
+            
             this.okno.Controls.Add(tloMapy);
         }
 
@@ -49,6 +54,19 @@ namespace Empire_Simulator
                  
         }
 
+        public void dodajHandlarzy()
+        {
+            foreach (Handlarz handlarz in swiat.pobierzListeHandlarzy())
+            {
+                handlarzeNaMapie.Add(handlarz, new PictureBox());
+                PictureBox tempPictureBox = handlarzeNaMapie[handlarz];
+                tempPictureBox.Image = global::Empire_Simulator.Properties.Resources.handlarz;
+                tempPictureBox.Location = new System.Drawing.Point(Convert.ToInt32(handlarz.zwrocPozycje().X), Convert.ToInt32(handlarz.zwrocPozycje().Y));
+                tempPictureBox.Name = "Handlarz";
+                tempPictureBox.Size = tempPictureBox.Image.Size;
+                tempPictureBox.BackColor = System.Drawing.Color.Transparent;
+            }
+        }
 
         public void naniesOsadyNaMape(PictureBox tloMapy)
         {
@@ -56,6 +74,13 @@ namespace Empire_Simulator
             {
                 tloMapy.Controls.Add(para.Value);
             } 
+        }
+        public void naniesHandlarzyNaMape(PictureBox tloMapy)
+        {
+            foreach (KeyValuePair<Handlarz, PictureBox> para in handlarzeNaMapie)
+            {
+                tloMapy.Controls.Add(para.Value);
+            }
         }
 
         public void wyswietlMape()
@@ -67,7 +92,7 @@ namespace Empire_Simulator
         {
             dodajLayout();
             wyswietlMape();
-            Thread.Sleep(4000);
+            Thread.Sleep(10000);
         }
             
     }

@@ -70,6 +70,11 @@ namespace Empire_Simulator
         }
 
 
+        public Point zwrocPozycje()
+        {
+            return this.pozycja;
+        }
+
         public void aktualizuj()
         {
             this.pozycja = aktualnaStrategia.podrozuj(pozycja, celPodrozy.pozycjaOsady());

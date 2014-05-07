@@ -63,6 +63,16 @@ namespace Empire_Simulator.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap handlarz {
+            get {
+                object obj = ResourceManager.GetObject("handlarz", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap osada1 {
             get {
                 object obj = ResourceManager.GetObject("osada1", resourceCulture);
