@@ -67,7 +67,6 @@ namespace Empire_Simulator
         {
             woz.laduj(towar);
             celPodrozy = WyznaczCelPodrozy();
-            Console.WriteLine(celPodrozy);
         }
 
 

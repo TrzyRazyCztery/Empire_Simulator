@@ -17,7 +17,8 @@ namespace Empire_Simulator
         private static int LICZNIK_OSAD = 0; //Licznik osad jest stały i zwiekszany co utworzeie obiektu osady
         private static List<Point> POZYCJE_OSAD = new List<Point>();
         private static readonly LosowanieZasobu LOSOWANIE_POPULACJI = new LosowanieZasobu(10, 30); 
-        private static readonly LosowanieZasobu LOSOWANIE_POZYCJI = new LosowanieZasobu(0,1000);
+        private static readonly LosowanieZasobu LOSOWANIE_POZYCJIX = new LosowanieZasobu(40,650);
+        private static readonly LosowanieZasobu LOSOWANIE_POZYCJIY = new LosowanieZasobu(40, 570);
         // LOSOWANIE_POPULACJI jest obiektem ktory jest w stanie wylosowac wartosc z zadanego przedziału
         private FabrykaZasobow fabrykaZasobow;
         // korzystamy z fabryki zasobów (wiecej w klasie fabryka zasobow)
@@ -95,7 +96,7 @@ namespace Empire_Simulator
 
             while (true)
             {
-                Point pozycja = new Point(LOSOWANIE_POZYCJI.losujZasob(), LOSOWANIE_POZYCJI.losujZasob());
+                Point pozycja = new Point(LOSOWANIE_POZYCJIX.losujZasob(), LOSOWANIE_POZYCJIY.losujZasob());
                 bool zaBlisko = false;
                 foreach (Point pozycjaOsady in POZYCJE_OSAD)
                 {
@@ -109,6 +110,7 @@ namespace Empire_Simulator
                 {
                     continue;
                 }
+                POZYCJE_OSAD.Add(pozycja);
                 return pozycja;
             }
         }
