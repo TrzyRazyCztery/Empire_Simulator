@@ -83,9 +83,49 @@ namespace Empire_Simulator.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap osada2 {
+            get {
+                object obj = ResourceManager.GetObject("osada2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap osada3 {
+            get {
+                object obj = ResourceManager.GetObject("osada3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap osada4 {
+            get {
+                object obj = ResourceManager.GetObject("osada4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tloEmpireSimulator1 {
             get {
                 object obj = ResourceManager.GetObject("tloEmpireSimulator1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tloEmpireSimulator11 {
+            get {
+                object obj = ResourceManager.GetObject("tloEmpireSimulator11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

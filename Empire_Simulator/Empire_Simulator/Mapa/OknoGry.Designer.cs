@@ -36,6 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1108, 800);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "OknoGry";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Empire Simulator";

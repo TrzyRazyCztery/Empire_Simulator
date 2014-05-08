@@ -9,10 +9,10 @@ namespace Empire_Simulator
 {
     class GeneratorMapy
     {
-        OknoGry okno;
-        Swiat swiat;
-        Dictionary<Osada, PictureBox> osadyNaMapie;
-        Dictionary<Handlarz, PictureBox> handlarzeNaMapie;
+        private OknoGry okno;
+        private Swiat swiat;
+        private Dictionary<Osada, PictureBox> osadyNaMapie;
+        private Dictionary<Handlarz, PictureBox> handlarzeNaMapie;
 
         public GeneratorMapy(Swiat swiat)
         {
@@ -20,10 +20,9 @@ namespace Empire_Simulator
             this.swiat = swiat;
             osadyNaMapie = new Dictionary<Osada,PictureBox>();
             handlarzeNaMapie = new Dictionary<Handlarz, PictureBox>();
-            dodajOsady();
-            dodajHandlarzy();
+            
         }
-        public void dodajLayout()
+        public void dodajTlo()
         {
             PictureBox tloMapy = new PictureBox();
             tloMapy.Image = global::Empire_Simulator.Properties.Resources.tloEmpireSimulator1;
@@ -49,8 +48,8 @@ namespace Empire_Simulator
                 tempPictureBox.Name = "Osada";
                 tempPictureBox.Size = tempPictureBox.Image.Size;
                 tempPictureBox.BackColor = System.Drawing.Color.Transparent;
-                
-            }
+                                                
+            }                                                                                                          
                  
         }
 
@@ -83,17 +82,16 @@ namespace Empire_Simulator
             }
         }
 
-        public void wyswietlMape()
+        public Mapa generujMape()
         {
-            this.okno.Show();
-            this.okno.Refresh();
+            dodajOsady();
+            dodajHandlarzy();
+            dodajTlo();
+            
+            
+            return new Mapa(osadyNaMapie, handlarzeNaMapie, okno);
         }
-        public void Run()
-        {
-            dodajLayout();
-            wyswietlMape();
-            Thread.Sleep(10000);
-        }
+
             
     }
 

@@ -17,8 +17,10 @@ namespace Empire_Simulator
             AktualizacjaStanuSwiata aktualizacjaSwiata = new AktualizacjaStanuSwiata(swiat);
             
             GeneratorMapy generator = new GeneratorMapy(swiat);
-            Thread watekMapy = new Thread(new ThreadStart(generator.Run));
+            Mapa mapa = generator.generujMape();
+            Thread watekMapy = new Thread(new ThreadStart(mapa.WyswietlMape));
             watekMapy.Start();
+          
 
             
             while (true) {

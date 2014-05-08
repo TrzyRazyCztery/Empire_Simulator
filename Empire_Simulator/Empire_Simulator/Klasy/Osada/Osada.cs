@@ -74,6 +74,10 @@ namespace Empire_Simulator
         {
             return pozycja;
         }
+        public int populacjaOsady()
+        {
+            return populacja.liczbaLudnosci();
+        }
 
 
         //################################ METODY DO TESTOW #############################################

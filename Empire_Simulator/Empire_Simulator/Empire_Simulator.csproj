@@ -80,7 +80,9 @@
     <Compile Include="Interfejsy\IStrategiaOsady.cs" />
     <Compile Include="Klasy\Zasob\LosowaniePotencjalu.cs" />
     <Compile Include="Klasy\Zasob\Zasob.cs" />
+    <Compile Include="Mapa\AktualizatorMapy.cs" />
     <Compile Include="Mapa\GeneratorMapy.cs" />
+    <Compile Include="Mapa\Mapa.cs" />
     <Compile Include="Mapa\OknoGry.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +126,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\handlarz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\osada2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\osada3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\osada4.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
