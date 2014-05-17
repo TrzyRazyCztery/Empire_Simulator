@@ -50,22 +50,22 @@ namespace Empire_Simulator
             }
             else if (celPodrozy.X < pozycja.X)
             {
-                pozycja.X = (pozycja.X - 50);
+                pozycja.X = (pozycja.X - 5);
             }
             else
             {
-                pozycja.X = (pozycja.X + 50);
+                pozycja.X = (pozycja.X + 5);
             }
             if ((celPodrozy.Y - pozycja.Y) < 50 && (celPodrozy.Y - pozycja.Y) > -50) 
             {
             }
             else if (celPodrozy.Y < pozycja.Y)
             {
-                pozycja.Y = (pozycja.Y - 50);
+                pozycja.Y = (pozycja.Y - 5);
             }
             else
             {
-                pozycja.Y = (pozycja.Y + 50);
+                pozycja.Y = (pozycja.Y + 5);
             }
             return pozycja;
         }

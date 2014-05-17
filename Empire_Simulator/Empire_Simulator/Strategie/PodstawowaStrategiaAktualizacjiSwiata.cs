@@ -11,7 +11,7 @@ namespace Empire_Simulator
 
         public int coIleDniAktualizowacOsade()
         {
-            return 7;
+            return 60;
         }
 
         public int coIleDniAktualizowacHandlarza()

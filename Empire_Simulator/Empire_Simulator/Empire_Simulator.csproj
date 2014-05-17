@@ -89,6 +89,7 @@
     <Compile Include="Mapa\OknoGry.Designer.cs">
       <DependentUpon>OknoGry.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mapa\WatekUruchomieniaMapy.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

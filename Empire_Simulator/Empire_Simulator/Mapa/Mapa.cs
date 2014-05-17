@@ -24,22 +24,11 @@ namespace Empire_Simulator
         {
             aktualizatorMapy.Aktualizuj();
         }
-
-
-
-
-        public void WyswietlMape(){
-            oknoGry.Show();
-            aktualizujMape();
-            oknoGry.Refresh();
             
-            Thread.Sleep(1000);
-        }
-        public void Run()
+              
+        public OknoGry zwrocOkno()
         {
-            WyswietlMape();
-            
-            
+            return oknoGry;
         }
 
     }

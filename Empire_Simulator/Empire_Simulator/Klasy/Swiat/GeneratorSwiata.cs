@@ -36,12 +36,15 @@ namespace Empire_Simulator
         }
         private List<Handlarz> generujHandlarzy()
         {
+            List<String> zasoby = new List<String>();
+            zasoby.Add("Mieso");
+            zasoby.Add("Jedwab");
+            zasoby.Add("Drewno");
             List<Handlarz> lista = new List<Handlarz>();
             for (int i = 0; i < strategiaGenerowania.iloscHandlarzyDoWygenerowania(); i++)
             {
                 Handlarz handlarz = fabrykaHandlarzy.generujHandlarza();
-                handlarz.ladujTowar(new KeyValuePair<string, Zasob>("Mieso", new Zasob("Mieso", 50, 5)));
-                handlarz.reczneUstawienieCelu(handlarz.WyznaczCelPodrozy());
+                handlarz.ladujTowar(new KeyValuePair<string, Zasob>(zasoby[i % zasoby.Count], new Zasob(zasoby[i % zasoby.Count], 40, 5)));
                 lista.Add(handlarz);
             }
             return lista;

@@ -9,20 +9,17 @@ namespace Empire_Simulator
 {
     class GeneratorMapy
     {
-        private OknoGry okno;
-        private Swiat swiat;
+
         private Dictionary<Osada, PictureBox> osadyNaMapie;
         private Dictionary<Handlarz, PictureBox> handlarzeNaMapie;
 
-        public GeneratorMapy(Swiat swiat)
+        public GeneratorMapy()
         {
-            this.okno = new OknoGry();
-            this.swiat = swiat;
             osadyNaMapie = new Dictionary<Osada,PictureBox>();
             handlarzeNaMapie = new Dictionary<Handlarz, PictureBox>();
             
         }
-        public void dodajTlo()
+        private void dodajTlo(OknoGry okno)
         {
             PictureBox tloMapy = new PictureBox();
             tloMapy.Image = global::Empire_Simulator.Properties.Resources.tloEmpireSimulator1;
@@ -34,10 +31,10 @@ namespace Empire_Simulator
             naniesOsadyNaMape(tloMapy);
             naniesHandlarzyNaMape(tloMapy);
             
-            this.okno.Controls.Add(tloMapy);
+            okno.Controls.Add(tloMapy);
         }
 
-        public void dodajOsady(){
+        private void dodajOsady(Swiat swiat){
 
             foreach (Osada osada in swiat.pobierzListeOsad())
             {
@@ -53,7 +50,7 @@ namespace Empire_Simulator
                  
         }
 
-        public void dodajHandlarzy()
+        private void dodajHandlarzy(Swiat swiat)
         {
             foreach (Handlarz handlarz in swiat.pobierzListeHandlarzy())
             {
@@ -67,14 +64,14 @@ namespace Empire_Simulator
             }
         }
 
-        public void naniesOsadyNaMape(PictureBox tloMapy)
+        private void naniesOsadyNaMape(PictureBox tloMapy)
         {
             foreach (KeyValuePair<Osada, PictureBox> para in osadyNaMapie)
             {
                 tloMapy.Controls.Add(para.Value);
             } 
         }
-        public void naniesHandlarzyNaMape(PictureBox tloMapy)
+        private void naniesHandlarzyNaMape(PictureBox tloMapy)
         {
             foreach (KeyValuePair<Handlarz, PictureBox> para in handlarzeNaMapie)
             {
@@ -82,14 +79,16 @@ namespace Empire_Simulator
             }
         }
 
-        public Mapa generujMape()
+        public void generujMape(OknoGry okno, Swiat swiat)
         {
-            dodajOsady();
-            dodajHandlarzy();
-            dodajTlo();
-            
-            
-            return new Mapa(osadyNaMapie, handlarzeNaMapie, okno);
+            dodajOsady(swiat);
+            dodajHandlarzy(swiat);
+            dodajTlo(okno);
+
+        }
+        public AktualizatorMapy generujAktualizatoraMapy()
+        {
+            return new AktualizatorMapy(osadyNaMapie, handlarzeNaMapie);
         }
 
             

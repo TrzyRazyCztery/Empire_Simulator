@@ -2,30 +2,26 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Empire_Simulator
 {
-    public class Test
+    class WatekUruchomieniaMapy
     {
-         [STAThread]
-        static void Main()
+        private OknoGry okno;
+
+        public WatekUruchomieniaMapy(OknoGry okno)
+        {
+            this.okno = okno;
+
+        }
+        [STAThread]
+        public void uruchomaMape()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            GeneratorSwiata generatorSwiata = new GeneratorSwiata();
-            Swiat swiat = generatorSwiata.generujSwiat();
-            OknoGry okno = new OknoGry(swiat);
             Application.Run(okno);
-
-
- 
-            
-
-
-          
-            
         }
     }
 }
