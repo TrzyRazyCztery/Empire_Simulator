@@ -16,7 +16,7 @@ namespace Empire_Simulator
 
         public int iloscHandlarzyDoWygenerowania()
         {
-            return 10;
+            return 5;
         }
 
         public int pojemnoscWozuHandlarza()

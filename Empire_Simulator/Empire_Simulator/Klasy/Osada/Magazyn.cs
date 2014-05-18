@@ -59,7 +59,7 @@ namespace Empire_Simulator
             string stan = "stan Magazynu: ";
             foreach (KeyValuePair<string, Zasob> para in zasoby)
             {
-                stan = string.Format("{0} \n{1} : {2}",stan, para.Key, para.Value.ToString());
+                stan = string.Format("{0} \r\n{1} : {2}", stan, para.Key, para.Value.ToString());
             }
             return stan;
         }

@@ -12,28 +12,39 @@ namespace Empire_Simulator
 
         private Dictionary<Osada, PictureBox> osadyNaMapie;
         private Dictionary<Handlarz, PictureBox> handlarzeNaMapie;
+        private PictureBox tloMapy;
+        private TextBox stanOsady;
 
         public GeneratorMapy()
         {
             osadyNaMapie = new Dictionary<Osada,PictureBox>();
             handlarzeNaMapie = new Dictionary<Handlarz, PictureBox>();
-            
+            tloMapy = new PictureBox();
+            stanOsady = new TextBox();
         }
         private void dodajTlo(OknoGry okno)
         {
-            PictureBox tloMapy = new PictureBox();
             tloMapy.Image = global::Empire_Simulator.Properties.Resources.tloEmpireSimulator1;
             tloMapy.Location = new System.Drawing.Point(1, 3);
             tloMapy.Name = "mapa";
-            tloMapy.Size = new System.Drawing.Size(799, 794);
+            tloMapy.Size = new System.Drawing.Size(1150, 794);
             tloMapy.TabIndex = 0;
             tloMapy.TabStop = false;
             naniesOsadyNaMape(tloMapy);
             naniesHandlarzyNaMape(tloMapy);
+            dodajPoleOpisuOsady();
             
             okno.Controls.Add(tloMapy);
         }
-
+        private void dodajPoleOpisuOsady()
+        {
+            tloMapy.Controls.Add(stanOsady);
+            stanOsady.Parent = tloMapy;
+            stanOsady.Multiline = true;
+            stanOsady.Location = new System.Drawing.Point(850, 150);
+            stanOsady.Size = new System.Drawing.Size(300, 200);
+            stanOsady.BackColor = System.Drawing.Color.Violet;
+        }
         private void dodajOsady(Swiat swiat){
 
             foreach (Osada osada in swiat.pobierzListeOsad())
@@ -69,6 +80,9 @@ namespace Empire_Simulator
             foreach (KeyValuePair<Osada, PictureBox> para in osadyNaMapie)
             {
                 tloMapy.Controls.Add(para.Value);
+                para.Value.MouseClick += new MouseEventHandler(wypisywanieStanuWioski);
+                
+                 
             } 
         }
         private void naniesHandlarzyNaMape(PictureBox tloMapy)
@@ -91,6 +105,22 @@ namespace Empire_Simulator
             return new AktualizatorMapy(osadyNaMapie, handlarzeNaMapie);
         }
 
+        private void wypisywanieStanuWioski(object sender, MouseEventArgs e )
+        {
+            var box = sender as PictureBox;
+            foreach (KeyValuePair<Osada,PictureBox> para in osadyNaMapie){
+                if (para.Value == box)
+                {
+                    stanOsady.Text = para.Key.ToString();
+
+                    break;
+                }
+            }
+           
+            
+            
+
+        }
             
     }
 

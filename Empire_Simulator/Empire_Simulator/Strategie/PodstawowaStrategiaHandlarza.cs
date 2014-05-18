@@ -44,7 +44,7 @@ namespace Empire_Simulator
 
         public Point podrozuj(Point pozycja, Point celPodrozy)
         {
-            if ((celPodrozy.X - pozycja.X) < 50 && (celPodrozy.X - pozycja.X) > -50)
+            if ((celPodrozy.X - pozycja.X) < 10 && (celPodrozy.X - pozycja.X) > -10)
             {
                 
             }
@@ -56,7 +56,7 @@ namespace Empire_Simulator
             {
                 pozycja.X = (pozycja.X + 5);
             }
-            if ((celPodrozy.Y - pozycja.Y) < 50 && (celPodrozy.Y - pozycja.Y) > -50) 
+            if ((celPodrozy.Y - pozycja.Y) < 10 && (celPodrozy.Y - pozycja.Y) > -10) 
             {
             }
             else if (celPodrozy.Y < pozycja.Y)

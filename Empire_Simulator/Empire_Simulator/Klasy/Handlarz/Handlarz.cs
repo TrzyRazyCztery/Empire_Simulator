@@ -78,7 +78,7 @@ namespace Empire_Simulator
         public void aktualizuj()
         {
             this.pozycja = aktualnaStrategia.podrozuj(pozycja, celPodrozy.pozycjaOsady());
-            if (Point.Subtract(pozycja, celPodrozy.pozycjaOsady()).Length <= 70)
+            if (Point.Subtract(pozycja, celPodrozy.pozycjaOsady()).Length <= 10)
             {
                 celPodrozy.Targowisko().WymianaTowaru(this);
             }

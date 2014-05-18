@@ -71,7 +71,7 @@ namespace Empire_Simulator
         //#################################### METODY DO TESTOW ######################################
         override public string ToString()
         {
-            return string.Format("{0} {1}, waga {2} kg.", ilosc, nazwa, ilosc * waga);
+            return string.Format("{0}", ilosc);
         }
         
        

@@ -48,10 +48,21 @@ namespace Empire_Simulator
 
         void narysujMape()
         {
+            
             GeneratorMapy generatorMapy= new GeneratorMapy();
             generatorMapy.generujMape(this, swiat);
             aktualizatorMapy = generatorMapy.generujAktualizatoraMapy();
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
         }
 
     }

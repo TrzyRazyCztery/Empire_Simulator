@@ -86,11 +86,10 @@ namespace Empire_Simulator
         //zwraca statystyki osady 
         override public string ToString()
         {
-            return string.Format("Osada : {0} \n" +
-                                 "{4} \n"+
-                                 "Wydobywa surowce: {3} \n" +
-                                 "{1} \n" +
-                                 "populacja : {2}", this.nazwa, this.magazyn.ToString(), populacja.liczbaLudnosci().ToString(), potencjalWydobywczy.ToString(), pozycja.ToString());
+            return string.Format("Osada : {0} \r\n" +
+                                 "Wydobywa surowce: {3} \r\n" +
+                                 "{1} \r\n" +
+                                 "populacja : {2}", this.nazwa, this.magazyn.ToString(), populacja.liczbaLudnosci().ToString(), potencjalWydobywczy.ToString());
         }
 
     }

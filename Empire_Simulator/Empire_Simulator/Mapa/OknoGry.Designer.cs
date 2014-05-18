@@ -35,7 +35,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1108, 800);
+            this.ClientSize = new System.Drawing.Size(1182, 800);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "OknoGry";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -46,6 +46,9 @@
         
 
         #endregion
+
+
+
 
 
 
