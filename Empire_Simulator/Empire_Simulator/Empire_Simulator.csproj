@@ -39,6 +39,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AlphaBlendTextBox">
+      <HintPath>Mapa\AlphaBlendTextBox.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -81,7 +84,9 @@
     <Compile Include="Klasy\Zasob\LosowaniePotencjalu.cs" />
     <Compile Include="Klasy\Zasob\Zasob.cs" />
     <Compile Include="Mapa\AktualizatorMapy.cs" />
-    <Compile Include="Mapa\GeneratorMapy.cs" />
+    <Compile Include="Mapa\GeneratorMapy.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Mapa\Mapa.cs" />
     <Compile Include="Mapa\OknoGry.cs">
       <SubType>Form</SubType>
@@ -136,6 +141,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\osada4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tloEmpireSimulator.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stanOsad.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
+using ZBobb;
 
 namespace Empire_Simulator
 {
@@ -13,21 +14,21 @@ namespace Empire_Simulator
         private Dictionary<Osada, PictureBox> osadyNaMapie;
         private Dictionary<Handlarz, PictureBox> handlarzeNaMapie;
         private PictureBox tloMapy;
-        private TextBox stanOsady;
+        private TextBoxLabel stanOsady;
 
         public GeneratorMapy()
         {
             osadyNaMapie = new Dictionary<Osada,PictureBox>();
             handlarzeNaMapie = new Dictionary<Handlarz, PictureBox>();
             tloMapy = new PictureBox();
-            stanOsady = new TextBox();
+            stanOsady = new TextBoxLabel();
         }
         private void dodajTlo(OknoGry okno)
         {
-            tloMapy.Image = global::Empire_Simulator.Properties.Resources.tloEmpireSimulator1;
+            tloMapy.Image = global::Empire_Simulator.Properties.Resources.tloEmpireSimulator;
             tloMapy.Location = new System.Drawing.Point(1, 3);
             tloMapy.Name = "mapa";
-            tloMapy.Size = new System.Drawing.Size(1150, 794);
+            tloMapy.Size = new System.Drawing.Size(1200, 794);
             tloMapy.TabIndex = 0;
             tloMapy.TabStop = false;
             naniesOsadyNaMape(tloMapy);
@@ -41,9 +42,16 @@ namespace Empire_Simulator
             tloMapy.Controls.Add(stanOsady);
             stanOsady.Parent = tloMapy;
             stanOsady.Multiline = true;
-            stanOsady.Location = new System.Drawing.Point(850, 150);
-            stanOsady.Size = new System.Drawing.Size(300, 200);
-            stanOsady.BackColor = System.Drawing.Color.Violet;
+            stanOsady.Location = new System.Drawing.Point(899, 228);
+            stanOsady.Size = new System.Drawing.Size(207, 207);
+            
+            stanOsady.BackAlpha = 50;
+            stanOsady.Font = new System.Drawing.Font("SketchFlow Print", 14, System.Drawing.FontStyle.Bold);
+            stanOsady.ReadOnly = true;
+            stanOsady.BorderStyle = BorderStyle.None;
+            
+           
+            
         }
         private void dodajOsady(Swiat swiat){
 
@@ -124,7 +132,21 @@ namespace Empire_Simulator
             
     }
 
-        
+    class TextBoxLabel : AlphaBlendTextBox
+    {
+        public TextBoxLabel()
+        {
+            this.SetStyle(ControlStyles.Selectable, false);
+            this.TabStop = false;
+        }
+        protected override void WndProc(ref Message m)
+        {
+            // Workaround required since TextBox calls Focus() on a mouse click
+            // Intercept WM_NCHITTEST to make it transparent to mouse clicks
+            if (m.Msg == 0x84) m.Result = IntPtr.Zero;
+            else base.WndProc(ref m);
+        }
+    }
             
 
 }

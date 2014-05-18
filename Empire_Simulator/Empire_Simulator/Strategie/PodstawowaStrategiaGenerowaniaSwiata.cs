@@ -11,7 +11,7 @@ namespace Empire_Simulator
 
         public int iloscOsadDoWygenerowania()
         {
-            return 5;
+            return 6;
         }
 
         public int iloscHandlarzyDoWygenerowania()
