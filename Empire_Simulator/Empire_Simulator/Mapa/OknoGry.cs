@@ -16,7 +16,7 @@ namespace Empire_Simulator
         private Swiat swiat;
         private AktualizatorMapy aktualizatorMapy;
         private AktualizacjaStanuSwiata aktualizacjaStanuSwiata;
-        private int dzien; 
+        private int dzien, miesiac, rok;
         public OknoGry(Swiat swiat)
         {
             
@@ -24,7 +24,9 @@ namespace Empire_Simulator
             this.swiat = swiat;
             this.aktualizacjaStanuSwiata = new AktualizacjaStanuSwiata(swiat);
             narysujMape();
-            dzien = 0;
+            dzien = 1;
+            miesiac = 1;
+            rok = 1;
             timer = new Timer();
             timer.Tick += new EventHandler(Timer_Tick);
             timer.Interval = 100;
@@ -38,11 +40,20 @@ namespace Empire_Simulator
 
         void Timer_Tick(object sender, EventArgs e)
         {
+            textBoxLabel1.Text = String.Format("Rok : {0}\r\nMiesiąc : {1}", rok,miesiac);
             aktualizacjaStanuSwiata.aktualizujSwiat(dzien);
             Console.WriteLine(swiat.pobierzListeHandlarzy()[0].zwrocPozycje());
             Console.WriteLine(swiat.pobierzListeHandlarzy()[1].zwrocPozycje());
             aktualizatorMapy.Aktualizuj();
             dzien += 1;
+            if (dzien % 32 == 0 ){
+                miesiac += 1;
+                if (miesiac % 13 == 0)
+                {
+                    miesiac = 1;
+                    rok += 1;
+                }
+            }
             this.Refresh();
         }
 

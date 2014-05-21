@@ -1,4 +1,6 @@
-﻿namespace Empire_Simulator
+﻿using System.Drawing;
+using System.Windows.Forms;
+namespace Empire_Simulator
 {
     partial class OknoGry
     {
@@ -31,6 +33,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.textBoxLabel1 = new Empire_Simulator.TextBoxLabel();
             this.SuspendLayout();
             // 
             // button1
@@ -75,6 +78,20 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // textBoxLabel1
+            // 
+            this.textBoxLabel1.BackAlpha = 50;
+            this.textBoxLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.textBoxLabel1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxLabel1.Font = new System.Drawing.Font("SketchFlow Print", 14F, System.Drawing.FontStyle.Bold);
+            this.textBoxLabel1.Location = new System.Drawing.Point(888, 71);
+            this.textBoxLabel1.Multiline = true;
+            this.textBoxLabel1.Name = "textBoxLabel1";
+            this.textBoxLabel1.ReadOnly = true;
+            this.textBoxLabel1.Size = new System.Drawing.Size(215, 53);
+            this.textBoxLabel1.TabIndex = 0;
+            this.textBoxLabel1.TabStop = false;
+            // 
             // OknoGry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -82,6 +99,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = global::Empire_Simulator.Properties.Resources.tloEmpireSimulator;
             this.ClientSize = new System.Drawing.Size(1204, 800);
+            this.Controls.Add(this.textBoxLabel1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -91,6 +109,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Empire Simulator";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
         
@@ -100,6 +119,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private TextBoxLabel textBoxLabel1;
 
 
 
