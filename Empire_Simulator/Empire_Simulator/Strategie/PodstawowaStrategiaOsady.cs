@@ -46,7 +46,7 @@ namespace Empire_Simulator
                 {
                     pair.Value.zmienIloscZasobu(3*liczbaLudnosci);//zmiana w zwiazku z potencjalem wydobywczym
                 }
-                pair.Value.zmienIloscZasobu(-(liczbaLudnosci)); // zmiana w zwiazku z populacja
+                pair.Value.zmienIloscZasobu(-(liczbaLudnosci/3)); // zmiana w zwiazku z populacja
             }
 
         }

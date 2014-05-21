@@ -17,17 +17,19 @@ namespace Empire_Simulator
         private Osada celPodrozy;
         //####################################### KONSTRUKTOR ##############################
 
-        public Handlarz(IStrategiaHandlarza strategia, int ladownoscWozu, string nazwa)
+        public Handlarz( int ladownoscWozu, string nazwa)
         {
             this.pozycja = new Point(500, 500);
             this.woz = new WozHandlarza(ladownoscWozu);
-            this.aktualnaStrategia = strategia;
             this.nazwa = nazwa;
 
         }
 
         //####################################### METODY #####################################
         
+        public void ustalStrategie(IStrategiaHandlarza strategia){
+            this.aktualnaStrategia = strategia;
+        }
         
         /// <summary>
         /// Wyznacza cel podróży na podstawie tego co ma na wozie i strategi handlarza
@@ -78,10 +80,15 @@ namespace Empire_Simulator
         public void aktualizuj()
         {
             this.pozycja = aktualnaStrategia.podrozuj(pozycja, celPodrozy.pozycjaOsady());
-            if (Point.Subtract(pozycja, celPodrozy.pozycjaOsady()).Length <= 10)
+            if (Point.Subtract(pozycja, celPodrozy.pozycjaOsady()).Length <= 20)
             {
                 celPodrozy.Targowisko().WymianaTowaru(this);
             }
+        }
+
+        public Osada zwrocCelPodrozy()
+        {
+            return celPodrozy;
         }
 
         //#################################### METODY DO TESTOW ###############################

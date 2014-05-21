@@ -12,14 +12,12 @@ namespace Empire_Simulator
     {
         //################################## POLA ########################################
         private static int LICZNIK_HANDLARZY = 0;
-        private IStrategiaHandlarza strategia;
         private int ladownoscHandlarzy;
 
         //################################## KONSTRUKTOR #################################
 
-        public FabrykaHandlarzy(IStrategiaHandlarza strategia, int ladownosc)
+        public FabrykaHandlarzy(int ladownosc)
         {
-            this.strategia = strategia;
             this.ladownoscHandlarzy = ladownosc;
         }
 
@@ -29,7 +27,7 @@ namespace Empire_Simulator
         public Handlarz generujHandlarza()
         {
             
-            return new Handlarz(strategia, ladownoscHandlarzy, nastepnaNazwa());
+            return new Handlarz(ladownoscHandlarzy, nastepnaNazwa());
         }
 
 

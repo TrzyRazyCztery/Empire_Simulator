@@ -11,7 +11,7 @@ namespace Empire_Simulator
         int iloscOsadDoWygenerowania();
         int iloscHandlarzyDoWygenerowania();
         int pojemnoscWozuHandlarza();
-        IStrategiaHandlarza strategiaHandlarza(List<Osada> listaOsad);
+        IStrategiaHandlarza strategiaHandlarza(List<Osada> listaOsad, List<Handlarz> listaHandlarzy);
         IStrategiaHandlu strategiaHandlu();
         IStrategiaOsady strategiaOsady();
 

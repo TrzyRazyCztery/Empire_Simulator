@@ -113,39 +113,9 @@ namespace Empire_Simulator.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap stanOsad {
-            get {
-                object obj = ResourceManager.GetObject("stanOsad", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap tloEmpireSimulator {
             get {
                 object obj = ResourceManager.GetObject("tloEmpireSimulator", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap tloEmpireSimulator1 {
-            get {
-                object obj = ResourceManager.GetObject("tloEmpireSimulator1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap tloEmpireSimulator11 {
-            get {
-                object obj = ResourceManager.GetObject("tloEmpireSimulator11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

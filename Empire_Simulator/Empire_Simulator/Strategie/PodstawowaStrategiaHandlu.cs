@@ -14,22 +14,24 @@ namespace Empire_Simulator
         /// </summary>
         /// <param name="magazyn"></param>
         /// <param name="handlarz"></param>
-        public void wymianaTowaru(Magazyn magazyn, Handlarz handlarz)
+        public void wymianaTowaru(Magazyn magazyn, Handlarz handlarz, List<string> coSprzedawac)
         {
+            Console.WriteLine(String.Format("Co sprzedawac: {0}",coSprzedawac.First()));
             KeyValuePair<string, Zasob> towarHandlarza = handlarz.rozladujTowar();
             Dictionary<string, Zasob> stanMagazynu = magazyn.pobierzStanMagazynu();
             Zasob towarDoMagazynu = stanMagazynu[towarHandlarza.Key];
 
             towarDoMagazynu.zmienIloscZasobu(towarHandlarza.Value.iloscZasobu());
-
-            KeyValuePair<string, Zasob> towarZMagazynu = new KeyValuePair<string, Zasob>("", new Zasob("", 0, 0));
+            KeyValuePair<string, Zasob> towarZMagazynu = new KeyValuePair<string,Zasob>();
+            string towarZakupowany = coSprzedawac.First(); 
             foreach (KeyValuePair<string, Zasob> para in stanMagazynu)
             {
-                if (para.Value.iloscZasobu() > towarZMagazynu.Value.iloscZasobu())
+                if (para.Key.Equals(towarZakupowany))
                 {
                     towarZMagazynu = para;
                 }
             }
+            Console.WriteLine(String.Format("Zaladowal : {0}",towarZMagazynu.Key));
             towarZMagazynu.Value.zmienIloscZasobu(-towarHandlarza.Value.iloscZasobu());
             handlarz.ladujTowar(new KeyValuePair<string, Zasob>(towarZMagazynu.Key, new Zasob(towarZMagazynu.Key, towarHandlarza.Value.iloscZasobu(), towarZMagazynu.Value.zwrocWageZasobu())));
 

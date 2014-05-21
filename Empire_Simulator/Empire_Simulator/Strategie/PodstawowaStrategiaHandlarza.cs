@@ -9,9 +9,11 @@ namespace Empire_Simulator
     class PodstawowaStrategiaHandlarza : IStrategiaHandlarza
     {
         List<Osada> listaOsad;
-        public PodstawowaStrategiaHandlarza(List<Osada> listaOsad)
+        List<Handlarz> listaHandlarzy;
+        public PodstawowaStrategiaHandlarza(List<Osada> listaOsad, List<Handlarz> listaHandlarzy)
         {
             this.listaOsad = listaOsad;
+            this.listaHandlarzy = listaHandlarzy;
         }
 
         /// <summary>
@@ -22,23 +24,35 @@ namespace Empire_Simulator
 
         public Osada wyznaczCelPodrozy(Handlarz handlarz)
         {
+            Osada cel = listaOsad.FirstOrDefault();
+            Zasob najmniej = new Zasob(handlarz.zwrocWoz().NazwaPrzewozonegoZasobu(), 10000, 0);
             foreach (Osada osada in listaOsad)
             {
-                Zasob najmniej = new Zasob("x", 10000, 0);
+                bool warunekWolnosciOsady = false;
+                foreach (Handlarz temp in listaHandlarzy)
+                {
+                    if (temp.zwrocCelPodrozy() == osada && temp.zwrocWoz().NazwaPrzewozonegoZasobu() == handlarz.zwrocWoz().NazwaPrzewozonegoZasobu())
+                    {
+                        warunekWolnosciOsady = true;
+                        break;
+                    }
+                }
+                if (warunekWolnosciOsady) { continue; }
                 Magazyn magazyn = osada.magazyny();
                 foreach (KeyValuePair<string, Zasob> para in magazyn.pobierzStanMagazynu())
                 {
-                    if (para.Value.iloscZasobu() < najmniej.iloscZasobu())
+                    if (para.Key.Equals(najmniej.nazwaZasobu()))
                     {
-                        najmniej = para.Value;
+                        if (najmniej.iloscZasobu() > para.Value.iloscZasobu())
+                        {
+                            najmniej = para.Value;
+                            cel = osada;
+                            break;
+                        }
                     }
                 }
-                if (najmniej.nazwaZasobu().Equals(handlarz.zwrocWoz().NazwaPrzewozonegoZasobu()))
-                {
-                    return osada;
-                }
             }
-            return listaOsad.FirstOrDefault();
+            return cel;
         }
 
 

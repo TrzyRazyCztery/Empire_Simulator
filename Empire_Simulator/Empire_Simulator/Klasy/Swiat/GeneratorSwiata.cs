@@ -12,6 +12,7 @@ namespace Empire_Simulator
         FabrykaHandlarzy fabrykaHandlarzy;
         FabrykaOsad fabrykaOsad;
         List<Osada> listaOsad;
+        List<Handlarz> listaHandlarzy;
 
         public GeneratorSwiata()
         {
@@ -20,9 +21,24 @@ namespace Empire_Simulator
                                           strategiaGenerowania.strategiaOsady(),
                                           strategiaGenerowania.strategiaHandlu());
             listaOsad = generujOsady();
-            fabrykaHandlarzy = new FabrykaHandlarzy(strategiaGenerowania.strategiaHandlarza(listaOsad), 
-                                                    strategiaGenerowania.pojemnoscWozuHandlarza());
+            fabrykaHandlarzy = new FabrykaHandlarzy(strategiaGenerowania.pojemnoscWozuHandlarza());
+            listaHandlarzy = generujHandlarzy();
+            ustalPierwszeCeleILadunkiHandlarzom();
             
+
+        }
+
+        private void ustalPierwszeCeleILadunkiHandlarzom()
+        {
+            List<String> zasoby = new List<String>();
+            zasoby.Add("Mieso");
+            zasoby.Add("Jedwab");
+            zasoby.Add("Drewno");
+            foreach (Handlarz handlarz in listaHandlarzy)
+            {
+                handlarz.ustalStrategie(strategiaGenerowania.strategiaHandlarza(listaOsad, listaHandlarzy));
+                handlarz.ladujTowar(new KeyValuePair<string, Zasob>(zasoby[listaHandlarzy.IndexOf(handlarz) % zasoby.Count], new Zasob(zasoby[listaHandlarzy.IndexOf(handlarz) % zasoby.Count], 100, 5)));
+            }
         }
 
         private List<Osada> generujOsady()
@@ -36,15 +52,12 @@ namespace Empire_Simulator
         }
         private List<Handlarz> generujHandlarzy()
         {
-            List<String> zasoby = new List<String>();
-            zasoby.Add("Mieso");
-            zasoby.Add("Jedwab");
-            zasoby.Add("Drewno");
+       
             List<Handlarz> lista = new List<Handlarz>();
             for (int i = 0; i < strategiaGenerowania.iloscHandlarzyDoWygenerowania(); i++)
             {
                 Handlarz handlarz = fabrykaHandlarzy.generujHandlarza();
-                handlarz.ladujTowar(new KeyValuePair<string, Zasob>(zasoby[i % zasoby.Count], new Zasob(zasoby[i % zasoby.Count], 40, 5)));
+                
                 lista.Add(handlarz);
             }
             return lista;
@@ -52,7 +65,7 @@ namespace Empire_Simulator
 
         public Swiat generujSwiat()
         {
-            return new Swiat(listaOsad, generujHandlarzy());
+            return new Swiat(listaOsad, listaHandlarzy);
         }
     }
 }

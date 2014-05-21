@@ -12,7 +12,7 @@ namespace Empire_Simulator
     class Targ
     {
         // #################################### POLA #########################################
-       
+        private List<string> coSprzedawac;
         private Magazyn magazyn;
         private IStrategiaHandlu strategia;
 
@@ -20,8 +20,9 @@ namespace Empire_Simulator
        
 
 
-        public Targ(Magazyn magazyn, IStrategiaHandlu strategia)
+        public Targ(Magazyn magazyn, IStrategiaHandlu strategia, List<string> coSprzedawac)
         {
+            this.coSprzedawac = coSprzedawac;
             this.strategia = strategia;
             this.magazyn = magazyn;
         }      
@@ -33,7 +34,7 @@ namespace Empire_Simulator
         /// <param name="handlarz"></param>
         public void WymianaTowaru(Handlarz handlarz)
         {
-            strategia.wymianaTowaru(magazyn, handlarz);
+            strategia.wymianaTowaru(magazyn, handlarz, coSprzedawac);
         }
         
 

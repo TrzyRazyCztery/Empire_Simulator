@@ -24,9 +24,9 @@ namespace Empire_Simulator
             return 80;
         }
 
-        public IStrategiaHandlarza strategiaHandlarza(List<Osada>listaOsad)
+        public IStrategiaHandlarza strategiaHandlarza(List<Osada>listaOsad, List<Handlarz> listaHandlarzy)
         {
-            return new PodstawowaStrategiaHandlarza(listaOsad);
+            return new PodstawowaStrategiaHandlarza(listaOsad, listaHandlarzy);
         }
 
         public IStrategiaHandlu strategiaHandlu()

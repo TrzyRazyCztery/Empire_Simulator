@@ -35,7 +35,7 @@ namespace Empire_Simulator
             this.nazwa = nazwa;
             this.populacja = populacja;
             this.magazyn = magazyn;
-            this.targ = new Targ(magazyn, strategiaHandlu);
+            this.targ = new Targ(magazyn, strategiaHandlu, potencjalWydobywczy.pobierzPotencjal());
             this.strategia = strategia;
             this.potencjalWydobywczy = potencjalWydobywczy;
             this.pozycja = pozycja;

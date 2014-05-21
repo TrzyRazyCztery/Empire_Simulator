@@ -7,6 +7,6 @@ namespace Empire_Simulator
 {
     interface IStrategiaHandlu
     {
-        void wymianaTowaru(Magazyn magazyn, Handlarz handlarz);
+        void wymianaTowaru(Magazyn magazyn, Handlarz handlarz, List<string> coSprzedawac);
     }
 }
