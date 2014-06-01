@@ -8,6 +8,9 @@ using ZBobb;
 
 namespace Empire_Simulator
 {
+    /// <summary>
+    /// Obiekt generatora mapy pozwala na naniesienie osad,handlarzy i tła na ramkę gry
+    /// </summary>
     class GeneratorMapy
     {
 
@@ -23,6 +26,10 @@ namespace Empire_Simulator
             tloMapy = new PictureBox();
             stanOsady = new TextBoxLabel();
         }
+        /// <summary>
+        /// podajac okno metoda naniesie aktualny stan swiata włącznie z tłem
+        /// </summary>
+        /// <param name="okno"></param>
         private void dodajTlo(OknoGry okno)
         {
             tloMapy.Image = global::Empire_Simulator.Properties.Resources.tloEmpireSimulator;
@@ -37,6 +44,9 @@ namespace Empire_Simulator
             
             okno.Controls.Add(tloMapy);
         }
+        /// <summary>
+        /// nanosi okno ktore bedzie wyswietlalo opisy osad
+        /// </summary>
         private void dodajPoleOpisuOsady()
         {
             tloMapy.Controls.Add(stanOsady);
@@ -53,6 +63,10 @@ namespace Empire_Simulator
            
             
         }
+        /// <summary>
+        /// wewnetrzna metoda generator Tworzaca słownik osada : pictureBox osady
+        /// </summary>
+        /// <param name="swiat"></param>
         private void dodajOsady(Swiat swiat){
 
             foreach (Osada osada in swiat.pobierzListeOsad())
@@ -68,7 +82,10 @@ namespace Empire_Simulator
             }                                                                                                          
                  
         }
-
+        /// <summary>
+        /// wewnetrzna metoda generatora Tworzaca słownik handlarz : pictureBox handalrza
+        /// </summary>
+        /// <param name="swiat"></param>
         private void dodajHandlarzy(Swiat swiat)
         {
             foreach (Handlarz handlarz in swiat.pobierzListeHandlarzy())
@@ -83,6 +100,10 @@ namespace Empire_Simulator
             }
         }
 
+        /// <summary>
+        /// wewnetrzna metoda generatora nanosząca osady na tło mapy
+        /// </summary>
+        /// <param name="swiat"></param>
         private void naniesOsadyNaMape(PictureBox tloMapy)
         {
             foreach (KeyValuePair<Osada, PictureBox> para in osadyNaMapie)
@@ -93,6 +114,11 @@ namespace Empire_Simulator
                  
             } 
         }
+
+        /// <summary>
+        /// wewnetrzna metoda generatora nanoszaca handlarzy na tło mapy
+        /// </summary>
+        /// <param name="swiat"></param>
         private void naniesHandlarzyNaMape(PictureBox tloMapy)
         {
             foreach (KeyValuePair<Handlarz, PictureBox> para in handlarzeNaMapie)
@@ -108,11 +134,20 @@ namespace Empire_Simulator
             dodajTlo(okno);
 
         }
+        /// <summary>
+        /// na podstawie mapy generuje obiekt jej aktualizatora
+        /// </summary>
+        /// <returns></returns>
         public AktualizatorMapy generujAktualizatoraMapy()
         {
             return new AktualizatorMapy(osadyNaMapie, handlarzeNaMapie);
         }
 
+        /// <summary>
+        /// zdarzenie do obsługi wypiswania stanu wioski po kliknieciu na nią w textboxie wygenerowanym w dodajPoleOpisuOsady()
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void wypisywanieStanuWioski(object sender, MouseEventArgs e )
         {
             var box = sender as PictureBox;
@@ -131,7 +166,9 @@ namespace Empire_Simulator
         }
             
     }
-
+    /// <summary>
+    /// Kod skopiowany z iternetu obsługujący przeźroczystość textBoxów 
+    /// </summary>
     class TextBoxLabel : AlphaBlendTextBox
     {
         public TextBoxLabel()

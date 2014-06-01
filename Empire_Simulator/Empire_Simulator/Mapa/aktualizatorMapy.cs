@@ -7,7 +7,11 @@ using System.Windows.Forms;
 using System.Windows;
 
 namespace Empire_Simulator
-{
+{  
+    /// <summary>
+    /// Obiekt aktualizatora mapy sprawdza czy zaszły jakies zmiany w świecie (wielkosc wioski, pozycja handlarza) 
+    /// i koryguje te zmiany na mapie
+    /// </summary>
     class AktualizatorMapy
     {
         private Dictionary<Osada, PictureBox> osadyNaMapie;
@@ -19,6 +23,7 @@ namespace Empire_Simulator
             this.handlarzeNaMapie = handlarze;
         }
 
+ 
         public void Aktualizuj()
         {
             foreach (KeyValuePair<Osada, PictureBox> para in osadyNaMapie)

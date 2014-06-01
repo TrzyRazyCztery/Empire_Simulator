@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace Empire_Simulator
 {
+    /// <summary>
+    /// Jest to główne okno gry
+    /// </summary>
     partial class OknoGry : Form
     {
         private Timer timer;
@@ -37,7 +40,12 @@ namespace Empire_Simulator
             this.SetStyle(ControlStyles.DoubleBuffer, true);
 
         }
-
+        /// <summary>
+        /// korzystam z timera z intervalem ustawionym na 100 który z kazdym "tickiem" zwieksza dzien przy okazji sprawdzajac czy cos sie zmienilo na mapie i 
+        /// uruchamiajac aktualizator mapy zgodnie z aktualnym dniem
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void Timer_Tick(object sender, EventArgs e)
         {
             textBoxLabel1.Text = String.Format("Rok : {0}\r\nMiesiąc : {1}", rok,miesiac);
@@ -65,17 +73,29 @@ namespace Empire_Simulator
             aktualizatorMapy = generatorMapy.generujAktualizatoraMapy();
 
         }
-
+        /// <summary>
+        /// metoda obsługująca przycisk exit
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        /// <summary>
+        /// metoda obsługująca przycisk Play
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             this.timer.Start();
         }
-
+        /// <summary>
+        /// metoda obsługująca przycisk Stop
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
             this.timer.Stop();

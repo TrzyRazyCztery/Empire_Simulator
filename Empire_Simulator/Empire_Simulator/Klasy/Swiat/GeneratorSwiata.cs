@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Empire_Simulator
 {
+    /// <summary>
+    /// Jest to klasa której obiekt potrafi wygenerowac swiat na podstawie podanej strategi
+    /// </summary>
     class GeneratorSwiata
     {
         private IStrategiaGenerowaniaSwiata strategiaGenerowania;
@@ -27,7 +30,9 @@ namespace Empire_Simulator
             
 
         }
-
+        /// <summary>
+        /// metoda jest tylko chwilowa gdy nie ma jeszcze rozwiazanego w pełni problemu startu handlarzy
+        /// </summary>
         private void ustalPierwszeCeleILadunkiHandlarzom()
         {
             List<String> zasoby = new List<String>();
@@ -40,7 +45,10 @@ namespace Empire_Simulator
                 handlarz.ladujTowar(new KeyValuePair<string, Zasob>(zasoby[listaHandlarzy.IndexOf(handlarz) % zasoby.Count], new Zasob(zasoby[listaHandlarzy.IndexOf(handlarz) % zasoby.Count], 100, 5)));
             }
         }
-
+        /// <summary>
+        /// metoda generujaca osady na podstawie strategi
+        /// </summary>
+        /// <returns>lista Osad</returns>
         private List<Osada> generujOsady()
         {
             List<Osada> lista = new List<Osada>();
@@ -50,6 +58,10 @@ namespace Empire_Simulator
             }
             return lista;
         }
+        /// <summary>
+        /// metoda generujaca handlarzy na podstawie strategi
+        /// </summary>
+        /// <returns>lista Handlarzy</returns>
         private List<Handlarz> generujHandlarzy()
         {
        
@@ -63,6 +75,10 @@ namespace Empire_Simulator
             return lista;
         }
 
+        /// <summary>
+        /// zwraca wygenerowany Świat
+        /// </summary>
+        /// <returns>Obekt klasy Świat</returns>
         public Swiat generujSwiat()
         {
             return new Swiat(listaOsad, listaHandlarzy);

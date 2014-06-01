@@ -6,6 +6,9 @@ using System.Threading;
 
 namespace Empire_Simulator
 {
+    /// <summary>
+    /// Obekt klasy swiat jest takim "kontenerem" trzymajcaym liste osad i liste handlarzy dostepnych w aktualnym świecie
+    /// </summary>
     class Swiat
     {
         private List<Osada> listaOsad;

@@ -71,12 +71,18 @@ namespace Empire_Simulator
             celPodrozy = WyznaczCelPodrozy();
         }
 
-
+        /// <summary>
+        /// zwraca pozycje w jakiej znajduje się handlarz
+        /// </summary>
+        /// <returns>Point(X,Y)</returns>
         public Point zwrocPozycje()
         {
             return this.pozycja;
         }
-
+        /// <summary>
+        /// Aktualizuje stan handlarza
+        /// przesuwa go do nowej pozyjci i ew wsyła na targ jesli jest blisko osady
+        /// </summary>
         public void aktualizuj()
         {
             this.pozycja = aktualnaStrategia.podrozuj(pozycja, celPodrozy.pozycjaOsady());
@@ -85,7 +91,10 @@ namespace Empire_Simulator
                 celPodrozy.Targowisko().WymianaTowaru(this);
             }
         }
-
+        /// <summary>
+        /// zwraca do jakiej osady podróżuje handlarz
+        /// </summary>
+        /// <returns>obiekt osady</returns>
         public Osada zwrocCelPodrozy()
         {
             return celPodrozy;
