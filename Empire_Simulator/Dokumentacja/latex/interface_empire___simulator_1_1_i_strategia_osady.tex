@@ -1,0 +1,83 @@
+\hypertarget{interface_empire___simulator_1_1_i_strategia_osady}{\section{Empire\+\_\+\+Simulator.\+I\+Strategia\+Osady Interface Reference}
+\label{interface_empire___simulator_1_1_i_strategia_osady}\index{Empire\+\_\+\+Simulator.\+I\+Strategia\+Osady@{Empire\+\_\+\+Simulator.\+I\+Strategia\+Osady}}
+}
+
+
+Interfejs strategi osady wymusza metody których używa osada do zaktualizowania swojego statusu tj. stanow magazynowych i populacji, strategie bedą wymienne  
+
+
+Inheritance diagram for Empire\+\_\+\+Simulator.\+I\+Strategia\+Osady\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_empire___simulator_1_1_i_strategia_osady}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{interface_empire___simulator_1_1_i_strategia_osady_ac9ee9a6f745e76c2869f7561dfce9dd5}{aktualizuj\+Stan\+Populacji} (\hyperlink{class_empire___simulator_1_1_populacja}{Populacja} populacja, \hyperlink{class_empire___simulator_1_1_magazyn}{Magazyn} stan\+Magazynowy)
+\begin{DoxyCompactList}\small\item\em Aktualizacja statnu popoulacji polega na zwiekszeniu lub zmiejszeniu populacji w zaleznosci od konkretnej strategi \end{DoxyCompactList}\item 
+void \hyperlink{interface_empire___simulator_1_1_i_strategia_osady_a79abecf2ba585fb74915ed89fd7b06d6}{aktualizuj\+Stany\+Magazynowe} (\hyperlink{class_empire___simulator_1_1_magazyn}{Magazyn} magazyn, \hyperlink{class_empire___simulator_1_1_potencjal_wydobywczy}{Potencjal\+Wydobywczy} potencjal\+Wydobywczy, int liczba\+Ludnosci)
+\begin{DoxyCompactList}\small\item\em aktualizacja stanów magazynowych polega na zwikszeniu lub zmiejszeniu stanow magazynowych w zależnosci od potencjalu wydobywczego itp. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interfejs strategi osady wymusza metody których używa osada do zaktualizowania swojego statusu tj. stanow magazynowych i populacji, strategie bedą wymienne 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{interface_empire___simulator_1_1_i_strategia_osady_ac9ee9a6f745e76c2869f7561dfce9dd5}{\index{Empire\+\_\+\+Simulator\+::\+I\+Strategia\+Osady@{Empire\+\_\+\+Simulator\+::\+I\+Strategia\+Osady}!aktualizuj\+Stan\+Populacji@{aktualizuj\+Stan\+Populacji}}
+\index{aktualizuj\+Stan\+Populacji@{aktualizuj\+Stan\+Populacji}!Empire\+\_\+\+Simulator\+::\+I\+Strategia\+Osady@{Empire\+\_\+\+Simulator\+::\+I\+Strategia\+Osady}}
+\subsubsection[{aktualizuj\+Stan\+Populacji}]{\setlength{\rightskip}{0pt plus 5cm}void Empire\+\_\+\+Simulator.\+I\+Strategia\+Osady.\+aktualizuj\+Stan\+Populacji (
+\begin{DoxyParamCaption}
+\item[{{\bf Populacja}}]{populacja, }
+\item[{{\bf Magazyn}}]{stan\+Magazynowy}
+\end{DoxyParamCaption}
+)}}\label{interface_empire___simulator_1_1_i_strategia_osady_ac9ee9a6f745e76c2869f7561dfce9dd5}
+
+
+Aktualizacja statnu popoulacji polega na zwiekszeniu lub zmiejszeniu populacji w zaleznosci od konkretnej strategi 
+
+
+\begin{DoxyParams}{Parameters}
+{\em populacja} & \\
+\hline
+{\em stan\+Magazynowy} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_empire___simulator_1_1_podstawowa_strategia_osady_a44cd6153770830086b7616b657d90e4e}{Empire\+\_\+\+Simulator.\+Podstawowa\+Strategia\+Osady}.
+
+\hypertarget{interface_empire___simulator_1_1_i_strategia_osady_a79abecf2ba585fb74915ed89fd7b06d6}{\index{Empire\+\_\+\+Simulator\+::\+I\+Strategia\+Osady@{Empire\+\_\+\+Simulator\+::\+I\+Strategia\+Osady}!aktualizuj\+Stany\+Magazynowe@{aktualizuj\+Stany\+Magazynowe}}
+\index{aktualizuj\+Stany\+Magazynowe@{aktualizuj\+Stany\+Magazynowe}!Empire\+\_\+\+Simulator\+::\+I\+Strategia\+Osady@{Empire\+\_\+\+Simulator\+::\+I\+Strategia\+Osady}}
+\subsubsection[{aktualizuj\+Stany\+Magazynowe}]{\setlength{\rightskip}{0pt plus 5cm}void Empire\+\_\+\+Simulator.\+I\+Strategia\+Osady.\+aktualizuj\+Stany\+Magazynowe (
+\begin{DoxyParamCaption}
+\item[{{\bf Magazyn}}]{magazyn, }
+\item[{{\bf Potencjal\+Wydobywczy}}]{potencjal\+Wydobywczy, }
+\item[{int}]{liczba\+Ludnosci}
+\end{DoxyParamCaption}
+)}}\label{interface_empire___simulator_1_1_i_strategia_osady_a79abecf2ba585fb74915ed89fd7b06d6}
+
+
+aktualizacja stanów magazynowych polega na zwikszeniu lub zmiejszeniu stanow magazynowych w zależnosci od potencjalu wydobywczego itp. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em magazyn} & \\
+\hline
+{\em potencjal\+Wydobywczy} & \\
+\hline
+{\em liczba\+Ludnosci} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_empire___simulator_1_1_podstawowa_strategia_osady_acf471696a52414814bd0608005c9518d}{Empire\+\_\+\+Simulator.\+Podstawowa\+Strategia\+Osady}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Paweł/\+Documents/\+Git\+Hub/\+Empire\+\_\+\+Simulator\+\_\+\+V\+S\+\_\+2008/\+Empire\+\_\+\+Simulator/\+Empire\+\_\+\+Simulator/\+Interfejsy/I\+Strategia\+Osady.\+cs\end{DoxyCompactItemize}

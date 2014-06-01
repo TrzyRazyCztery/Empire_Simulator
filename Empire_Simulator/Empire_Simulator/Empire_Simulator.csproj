@@ -100,9 +100,7 @@
     <Compile Include="Klasy\Zasob\LosowaniePotencjalu.cs" />
     <Compile Include="Klasy\Zasob\Zasob.cs" />
     <Compile Include="Mapa\AktualizatorMapy.cs" />
-    <Compile Include="Mapa\GeneratorMapy.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Mapa\GeneratorMapy.cs" />
     <Compile Include="Mapa\OknoGry.cs">
       <SubType>Form</SubType>
     </Compile>

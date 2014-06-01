@@ -1,0 +1,111 @@
+\hypertarget{namespace_empire___simulator}{\section{Package Empire\+\_\+\+Simulator}
+\label{namespace_empire___simulator}\index{Empire\+\_\+\+Simulator@{Empire\+\_\+\+Simulator}}
+}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+package \hyperlink{namespace_empire___simulator_1_1_properties}{Properties}
+\item 
+package \hyperlink{namespace_empire___simulator_1_1_wyjatki}{Wyjatki}
+\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_empire___simulator_1_1_aktualizacja_handlarzy}{Aktualizacja\+Handlarzy}
+\item 
+class \hyperlink{class_empire___simulator_1_1_aktualizacja_osad}{Aktualizacja\+Osad}
+\item 
+class \hyperlink{class_empire___simulator_1_1_aktualizacja_stanu_swiata}{Aktualizacja\+Stanu\+Swiata}
+\begin{DoxyCompactList}\small\item\em Jest to klasa której obiekt jest wstanie zaktualizowac caly stan swiata. \end{DoxyCompactList}\item 
+class \hyperlink{class_empire___simulator_1_1_aktualizator_mapy}{Aktualizator\+Mapy}
+\begin{DoxyCompactList}\small\item\em Obiekt aktualizatora mapy sprawdza czy zaszły jakies zmiany w świecie (wielkosc wioski, pozycja handlarza) i koryguje te zmiany na mapie \end{DoxyCompactList}\item 
+class \hyperlink{class_empire___simulator_1_1_fabryka_handlarzy}{Fabryka\+Handlarzy}
+\begin{DoxyCompactList}\small\item\em generuje handlarzy z podana strategią i iloscia towaru ktora mogą ze sobą wozić. \end{DoxyCompactList}\item 
+class \hyperlink{class_empire___simulator_1_1_fabryka_osad}{Fabryka\+Osad}
+\begin{DoxyCompactList}\small\item\em Klasa która tworzy Osady \end{DoxyCompactList}\item 
+class \hyperlink{class_empire___simulator_1_1_fabryka_zasobow}{Fabryka\+Zasobow}
+\begin{DoxyCompactList}\small\item\em Fabryka Zasobow to klasa ktora potrafi generowac gotowe do uzycia obiekty zasobow na podstawie swoich danyh \end{DoxyCompactList}\item 
+class \hyperlink{class_empire___simulator_1_1_generator_mapy}{Generator\+Mapy}
+\begin{DoxyCompactList}\small\item\em Obiekt generatora mapy pozwala na naniesienie osad,handlarzy i tła na ramkę gry \end{DoxyCompactList}\item 
+class \hyperlink{class_empire___simulator_1_1_generator_swiata}{Generator\+Swiata}
+\begin{DoxyCompactList}\small\item\em Jest to klasa której obiekt potrafi wygenerowac swiat na podstawie podanej strategi \end{DoxyCompactList}\item 
+class \hyperlink{class_empire___simulator_1_1_handlarz}{Handlarz}
+\item 
+interface \hyperlink{interface_empire___simulator_1_1_i_strategia_aktualizacji_swiata}{I\+Strategia\+Aktualizacji\+Swiata}
+\begin{DoxyCompactList}\small\item\em Interfejs Aktualizacji swiata ma metody zwracajace to co ile dni handlarz zmienia swój stan, podobnie tyczy się to wioski \end{DoxyCompactList}\item 
+interface \hyperlink{interface_empire___simulator_1_1_i_strategia_generowania_swiata}{I\+Strategia\+Generowania\+Swiata}
+\begin{DoxyCompactList}\small\item\em Jest to ogolny interfejs generowania swiata, ktory mówi o tym ile osad wygenerowac na mapie, ilu handlarzy,i jaka pojemność bedzie miał wóz handlarze podaje też z jakich strategi handlarza,handlu i Osady bedziemy korzystac \end{DoxyCompactList}\item 
+interface \hyperlink{interface_empire___simulator_1_1_i_strategia_handlarza}{I\+Strategia\+Handlarza}
+\begin{DoxyCompactList}\small\item\em Interfejs mówiący o tym jak wyznaczać nowy cel podróży dla handlarza oraz w jaki sposob sie przemieszcza \end{DoxyCompactList}\item 
+interface \hyperlink{interface_empire___simulator_1_1_i_strategia_handlu}{I\+Strategia\+Handlu}
+\begin{DoxyCompactList}\small\item\em interfejs opisujacy jak wyglada wymiana towaru miedzy targiem a handlarzem \end{DoxyCompactList}\item 
+interface \hyperlink{interface_empire___simulator_1_1_i_strategia_osady}{I\+Strategia\+Osady}
+\begin{DoxyCompactList}\small\item\em Interfejs strategi osady wymusza metody których używa osada do zaktualizowania swojego statusu tj. stanow magazynowych i populacji, strategie bedą wymienne \end{DoxyCompactList}\item 
+class \hyperlink{class_empire___simulator_1_1_losowanie_potencjalu}{Losowanie\+Potencjalu}
+\begin{DoxyCompactList}\small\item\em zwraca liste wylosowanych zasobow. \end{DoxyCompactList}\item 
+class \hyperlink{class_empire___simulator_1_1_losowanie_zasobu}{Losowanie\+Zasobu}
+\begin{DoxyCompactList}\small\item\em Tworzy obiekt potrafiacy wylosowac liczbe z zadanego mu przedzialu \end{DoxyCompactList}\item 
+class \hyperlink{class_empire___simulator_1_1_magazyn}{Magazyn}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_empire___simulator_1_1_magazyn}{Magazyn} jest obiektem posiadanym przez osadę, i przetrzymującym w swoich polach ilośći zasobów posiadane przez ową wioskę \end{DoxyCompactList}\item 
+class \hyperlink{class_empire___simulator_1_1_okno_gry}{Okno\+Gry}
+\begin{DoxyCompactList}\small\item\em Jest to główne okno gry \end{DoxyCompactList}\item 
+class \hyperlink{class_empire___simulator_1_1_osada}{Osada}
+\begin{DoxyCompactList}\small\item\em Klasa Tworzaca obiekt osady \end{DoxyCompactList}\item 
+class \hyperlink{class_empire___simulator_1_1_podstawowa_strategia_aktualizacji_swiata}{Podstawowa\+Strategia\+Aktualizacji\+Swiata}
+\item 
+class \hyperlink{class_empire___simulator_1_1_podstawowa_strategia_generowania_swiata}{Podstawowa\+Strategia\+Generowania\+Swiata}
+\item 
+class \hyperlink{class_empire___simulator_1_1_podstawowa_strategia_handlarza}{Podstawowa\+Strategia\+Handlarza}
+\item 
+class \hyperlink{class_empire___simulator_1_1_podstawowa_strategia_handlu}{Podstawowa\+Strategia\+Handlu}
+\item 
+class \hyperlink{class_empire___simulator_1_1_podstawowa_strategia_osady}{Podstawowa\+Strategia\+Osady}
+\begin{DoxyCompactList}\small\item\em Własna strategia implementujaca interfejs strategi osady \end{DoxyCompactList}\item 
+class \hyperlink{class_empire___simulator_1_1_populacja}{Populacja}
+\begin{DoxyCompactList}\small\item\em Klasa Tworzaca obiekty populacji tj zawierajace informacie o liczbie ludnosci \end{DoxyCompactList}\item 
+class \hyperlink{class_empire___simulator_1_1_potencjal_wydobywczy}{Potencjal\+Wydobywczy}
+\begin{DoxyCompactList}\small\item\em Potencjal wydobywczy bedzie gotowym obiektem zawieajacym liste obiektow zasobu jakie generuje dana osada \end{DoxyCompactList}\item 
+class \hyperlink{class_empire___simulator_1_1_swiat}{Swiat}
+\begin{DoxyCompactList}\small\item\em Obekt klasy swiat jest takim \char`\"{}kontenerem\char`\"{} trzymajcaym liste osad i liste handlarzy dostepnych w aktualnym świecie \end{DoxyCompactList}\item 
+class \hyperlink{class_empire___simulator_1_1_targ}{Targ}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_empire___simulator_1_1_targ}{Targ} posiadany przez miasto i uzywany do komunikacji miedzy handlarzami a miastem \end{DoxyCompactList}\item 
+class \hyperlink{class_empire___simulator_1_1_test}{Test}
+\item 
+class \hyperlink{class_empire___simulator_1_1_text_box_label}{Text\+Box\+Label}
+\begin{DoxyCompactList}\small\item\em Kod skopiowany z iternetu obsługujący przeźroczystość text\+Boxów \end{DoxyCompactList}\item 
+class \hyperlink{class_empire___simulator_1_1_woz_handlarza}{Woz\+Handlarza}
+\begin{DoxyCompactList}\small\item\em klasa woz handlarza bedzie obiektem trzymajacym zasoby przewozone przez Handlarza uzywam slownika dlatego ze w przyszlosci planuje to ze handlarz bedzie wozil kilka roznych towarow \end{DoxyCompactList}\item 
+class \hyperlink{class_empire___simulator_1_1_zasob}{Zasob}
+\begin{DoxyCompactList}\small\item\em Obiekt zasobu przechowujacy jego nazwe wage i ilosc \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+delegate void \hyperlink{namespace_empire___simulator_acf092e88f238b8c325a166a8a76e34d6}{Delegat\+Aktualizacji\+Handlarzy} ()
+\begin{DoxyCompactList}\small\item\em klasa Towrzaca obiekt delegata który zawiera w sobie wywoałanie w kolejnosci aktualizacji każdego z handlarzy \end{DoxyCompactList}\item 
+delegate void \hyperlink{namespace_empire___simulator_a5dff9041bde3e9a806615f75bce12d3f}{Delegat\+Aktualizacji\+Osad} ()
+\begin{DoxyCompactList}\small\item\em klasa towrzaca obiekt delegata który zawiera w sobie wywoałanie w kolejnosci aktualizacji każdej z osad \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespace_empire___simulator_acf092e88f238b8c325a166a8a76e34d6}{\index{Empire\+\_\+\+Simulator@{Empire\+\_\+\+Simulator}!Delegat\+Aktualizacji\+Handlarzy@{Delegat\+Aktualizacji\+Handlarzy}}
+\index{Delegat\+Aktualizacji\+Handlarzy@{Delegat\+Aktualizacji\+Handlarzy}!Empire\+\_\+\+Simulator@{Empire\+\_\+\+Simulator}}
+\subsubsection[{Delegat\+Aktualizacji\+Handlarzy}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Empire\+\_\+\+Simulator.\+Delegat\+Aktualizacji\+Handlarzy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespace_empire___simulator_acf092e88f238b8c325a166a8a76e34d6}
+
+
+klasa Towrzaca obiekt delegata który zawiera w sobie wywoałanie w kolejnosci aktualizacji każdego z handlarzy 
+
+\hypertarget{namespace_empire___simulator_a5dff9041bde3e9a806615f75bce12d3f}{\index{Empire\+\_\+\+Simulator@{Empire\+\_\+\+Simulator}!Delegat\+Aktualizacji\+Osad@{Delegat\+Aktualizacji\+Osad}}
+\index{Delegat\+Aktualizacji\+Osad@{Delegat\+Aktualizacji\+Osad}!Empire\+\_\+\+Simulator@{Empire\+\_\+\+Simulator}}
+\subsubsection[{Delegat\+Aktualizacji\+Osad}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Empire\+\_\+\+Simulator.\+Delegat\+Aktualizacji\+Osad (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespace_empire___simulator_a5dff9041bde3e9a806615f75bce12d3f}
+
+
+klasa towrzaca obiekt delegata który zawiera w sobie wywoałanie w kolejnosci aktualizacji każdej z osad 
+

@@ -131,7 +131,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Empire_Simulator.Swiat" Collapsed="true">
-    <Position X="7.75" Y="0.5" Width="1.5" />
+    <Position X="8" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAgAAAAAgAAAAAAAAAAgACAAAAEBAAAAAAAA=</HashCode>
       <FileName>Klasy\Swiat\Swiat.cs</FileName>
@@ -191,12 +191,31 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Empire_Simulator.PodstawowaStrategiaAktualizacjiSwiata" Collapsed="true">
-    <Position X="12.75" Y="2.25" Width="1.5" />
+    <Position X="12.25" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAA=</HashCode>
       <FileName>Strategie\PodstawowaStrategiaAktualizacjiSwiata.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.221" />
+  </Class>
+  <Class Name="Empire_Simulator.AktualizatorMapy" Collapsed="true">
+    <Position X="8" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAgAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Mapa\AktualizatorMapy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Empire_Simulator.AktualizacjaStanuSwiata" Collapsed="true">
+    <Position X="12.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAIAAQAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Klasy\Aktualizacja\AktualizacjaStanuSwiata.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="strategia" />
+      <Field Name="delegatOsad" />
+      <Field Name="delegatHandlarzy" />
+    </ShowAsAssociation>
   </Class>
   <Interface Name="Empire_Simulator.IStrategiaHandlarza" Collapsed="true">
     <Position X="5.25" Y="0.5" Width="1.5" />
@@ -226,5 +245,26 @@
       <FileName>Interfejsy\IStrategiaGenerowaniaSwiata.cs</FileName>
     </TypeIdentifier>
   </Interface>
+  <Interface Name="Empire_Simulator.IStrategiaAktualizacjiSwiata" Collapsed="true">
+    <Position X="12.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAA=</HashCode>
+      <FileName>Interfejsy\IStrategiaAktualizacjiSwiata.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Delegate Name="Empire_Simulator.DelegatAktualizacjiOsad" Collapsed="true">
+    <Position X="10.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Klasy\Aktualizacja\Delegaty\AktualizacjaOsad.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Empire_Simulator.DelegatAktualizacjiHandlarzy" Collapsed="true">
+    <Position X="10.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Klasy\Aktualizacja\Delegaty\AktualizacjaHandlarzy.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

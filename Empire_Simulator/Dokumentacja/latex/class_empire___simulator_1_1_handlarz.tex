@@ -1,0 +1,137 @@
+\hypertarget{class_empire___simulator_1_1_handlarz}{\section{Empire\+\_\+\+Simulator.\+Handlarz Class Reference}
+\label{class_empire___simulator_1_1_handlarz}\index{Empire\+\_\+\+Simulator.\+Handlarz@{Empire\+\_\+\+Simulator.\+Handlarz}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_empire___simulator_1_1_handlarz_a7ea63718304e5484b7526e0e3f154941}{{\bfseries Handlarz} (int ladownosc\+Wozu, string nazwa)}\label{class_empire___simulator_1_1_handlarz_a7ea63718304e5484b7526e0e3f154941}
+
+\item 
+\hypertarget{class_empire___simulator_1_1_handlarz_a8b1f29aed34339e6136739184e4faa89}{void {\bfseries ustal\+Strategie} (\hyperlink{interface_empire___simulator_1_1_i_strategia_handlarza}{I\+Strategia\+Handlarza} strategia)}\label{class_empire___simulator_1_1_handlarz_a8b1f29aed34339e6136739184e4faa89}
+
+\item 
+\hyperlink{class_empire___simulator_1_1_osada}{Osada} \hyperlink{class_empire___simulator_1_1_handlarz_a2257fab877e2c0362adfea97823c09f4}{Wyznacz\+Cel\+Podrozy} ()
+\begin{DoxyCompactList}\small\item\em Wyznacza cel podróży na podstawie tego co ma na wozie i strategi handlarza \end{DoxyCompactList}\item 
+\hyperlink{class_empire___simulator_1_1_woz_handlarza}{Woz\+Handlarza} \hyperlink{class_empire___simulator_1_1_handlarz_aabded215d71b5fbcfec11027a8bf4593}{zwroc\+Woz} ()
+\begin{DoxyCompactList}\small\item\em Zwraca to co ma na wozie (Czy to napewno dobry pomysl?) lepiej chyba bedzie jesli kazda kominikacja z wozem bedzie odbywala sie za pomoca handlarza \end{DoxyCompactList}\item 
+Key\+Value\+Pair$<$ string, \hyperlink{class_empire___simulator_1_1_zasob}{Zasob} $>$ \hyperlink{class_empire___simulator_1_1_handlarz_a4c3a0bb8e7fcbaf374c42c70c0979b29}{rozladuj\+Towar} ()
+\begin{DoxyCompactList}\small\item\em rozladowuje towar ze swjojego wozu \end{DoxyCompactList}\item 
+void \hyperlink{class_empire___simulator_1_1_handlarz_adc85cfddd7e9edf1aa2eaaa064e765c9}{laduj\+Towar} (Key\+Value\+Pair$<$ string, \hyperlink{class_empire___simulator_1_1_zasob}{Zasob} $>$ towar)
+\begin{DoxyCompactList}\small\item\em laduje dany towar na woz i ustala sobie na podstawie tego co zaladowal nowy cel podróży. \end{DoxyCompactList}\item 
+Point \hyperlink{class_empire___simulator_1_1_handlarz_ae6c1178490e2a429ece397f5b3a656d9}{zwroc\+Pozycje} ()
+\begin{DoxyCompactList}\small\item\em zwraca pozycje w jakiej znajduje się handlarz \end{DoxyCompactList}\item 
+void \hyperlink{class_empire___simulator_1_1_handlarz_a1d1c6dbfb9b01f787a5bd2d87ff2011b}{aktualizuj} ()
+\begin{DoxyCompactList}\small\item\em Aktualizuje stan handlarza przesuwa go do nowej pozyjci i ew wsyła na targ jesli jest blisko osady \end{DoxyCompactList}\item 
+\hyperlink{class_empire___simulator_1_1_osada}{Osada} \hyperlink{class_empire___simulator_1_1_handlarz_ad51b2b7a3552a81ee97a2e56d8c2b4a9}{zwroc\+Cel\+Podrozy} ()
+\begin{DoxyCompactList}\small\item\em zwraca do jakiej osady podróżuje handlarz \end{DoxyCompactList}\item 
+\hypertarget{class_empire___simulator_1_1_handlarz_afa89dc166094616e01884c0d014edbb2}{override string {\bfseries To\+String} ()}\label{class_empire___simulator_1_1_handlarz_afa89dc166094616e01884c0d014edbb2}
+
+\item 
+\hypertarget{class_empire___simulator_1_1_handlarz_a01ce9c16678c486a0d62d331b7fff939}{void {\bfseries reczne\+Ustawienie\+Celu} (\hyperlink{class_empire___simulator_1_1_osada}{Osada} osada)}\label{class_empire___simulator_1_1_handlarz_a01ce9c16678c486a0d62d331b7fff939}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_empire___simulator_1_1_handlarz_a1d1c6dbfb9b01f787a5bd2d87ff2011b}{\index{Empire\+\_\+\+Simulator\+::\+Handlarz@{Empire\+\_\+\+Simulator\+::\+Handlarz}!aktualizuj@{aktualizuj}}
+\index{aktualizuj@{aktualizuj}!Empire\+\_\+\+Simulator\+::\+Handlarz@{Empire\+\_\+\+Simulator\+::\+Handlarz}}
+\subsubsection[{aktualizuj}]{\setlength{\rightskip}{0pt plus 5cm}void Empire\+\_\+\+Simulator.\+Handlarz.\+aktualizuj (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_empire___simulator_1_1_handlarz_a1d1c6dbfb9b01f787a5bd2d87ff2011b}
+
+
+Aktualizuje stan handlarza przesuwa go do nowej pozyjci i ew wsyła na targ jesli jest blisko osady 
+
+\hypertarget{class_empire___simulator_1_1_handlarz_adc85cfddd7e9edf1aa2eaaa064e765c9}{\index{Empire\+\_\+\+Simulator\+::\+Handlarz@{Empire\+\_\+\+Simulator\+::\+Handlarz}!laduj\+Towar@{laduj\+Towar}}
+\index{laduj\+Towar@{laduj\+Towar}!Empire\+\_\+\+Simulator\+::\+Handlarz@{Empire\+\_\+\+Simulator\+::\+Handlarz}}
+\subsubsection[{laduj\+Towar}]{\setlength{\rightskip}{0pt plus 5cm}void Empire\+\_\+\+Simulator.\+Handlarz.\+laduj\+Towar (
+\begin{DoxyParamCaption}
+\item[{Key\+Value\+Pair$<$ string, {\bf Zasob} $>$}]{towar}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_empire___simulator_1_1_handlarz_adc85cfddd7e9edf1aa2eaaa064e765c9}
+
+
+laduje dany towar na woz i ustala sobie na podstawie tego co zaladowal nowy cel podróży. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em towar} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_empire___simulator_1_1_handlarz_a4c3a0bb8e7fcbaf374c42c70c0979b29}{\index{Empire\+\_\+\+Simulator\+::\+Handlarz@{Empire\+\_\+\+Simulator\+::\+Handlarz}!rozladuj\+Towar@{rozladuj\+Towar}}
+\index{rozladuj\+Towar@{rozladuj\+Towar}!Empire\+\_\+\+Simulator\+::\+Handlarz@{Empire\+\_\+\+Simulator\+::\+Handlarz}}
+\subsubsection[{rozladuj\+Towar}]{\setlength{\rightskip}{0pt plus 5cm}Key\+Value\+Pair$<$string, {\bf Zasob}$>$ Empire\+\_\+\+Simulator.\+Handlarz.\+rozladuj\+Towar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_empire___simulator_1_1_handlarz_a4c3a0bb8e7fcbaf374c42c70c0979b29}
+
+
+rozladowuje towar ze swjojego wozu 
+
+\begin{DoxyReturn}{Returns}
+para nazwy zasobu z zasobem
+\end{DoxyReturn}
+\hypertarget{class_empire___simulator_1_1_handlarz_a2257fab877e2c0362adfea97823c09f4}{\index{Empire\+\_\+\+Simulator\+::\+Handlarz@{Empire\+\_\+\+Simulator\+::\+Handlarz}!Wyznacz\+Cel\+Podrozy@{Wyznacz\+Cel\+Podrozy}}
+\index{Wyznacz\+Cel\+Podrozy@{Wyznacz\+Cel\+Podrozy}!Empire\+\_\+\+Simulator\+::\+Handlarz@{Empire\+\_\+\+Simulator\+::\+Handlarz}}
+\subsubsection[{Wyznacz\+Cel\+Podrozy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Osada} Empire\+\_\+\+Simulator.\+Handlarz.\+Wyznacz\+Cel\+Podrozy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_empire___simulator_1_1_handlarz_a2257fab877e2c0362adfea97823c09f4}
+
+
+Wyznacza cel podróży na podstawie tego co ma na wozie i strategi handlarza 
+
+\begin{DoxyReturn}{Returns}
+obiekt osady do ktorej sie kieruje
+\end{DoxyReturn}
+\hypertarget{class_empire___simulator_1_1_handlarz_ad51b2b7a3552a81ee97a2e56d8c2b4a9}{\index{Empire\+\_\+\+Simulator\+::\+Handlarz@{Empire\+\_\+\+Simulator\+::\+Handlarz}!zwroc\+Cel\+Podrozy@{zwroc\+Cel\+Podrozy}}
+\index{zwroc\+Cel\+Podrozy@{zwroc\+Cel\+Podrozy}!Empire\+\_\+\+Simulator\+::\+Handlarz@{Empire\+\_\+\+Simulator\+::\+Handlarz}}
+\subsubsection[{zwroc\+Cel\+Podrozy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Osada} Empire\+\_\+\+Simulator.\+Handlarz.\+zwroc\+Cel\+Podrozy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_empire___simulator_1_1_handlarz_ad51b2b7a3552a81ee97a2e56d8c2b4a9}
+
+
+zwraca do jakiej osady podróżuje handlarz 
+
+\begin{DoxyReturn}{Returns}
+obiekt osady
+\end{DoxyReturn}
+\hypertarget{class_empire___simulator_1_1_handlarz_ae6c1178490e2a429ece397f5b3a656d9}{\index{Empire\+\_\+\+Simulator\+::\+Handlarz@{Empire\+\_\+\+Simulator\+::\+Handlarz}!zwroc\+Pozycje@{zwroc\+Pozycje}}
+\index{zwroc\+Pozycje@{zwroc\+Pozycje}!Empire\+\_\+\+Simulator\+::\+Handlarz@{Empire\+\_\+\+Simulator\+::\+Handlarz}}
+\subsubsection[{zwroc\+Pozycje}]{\setlength{\rightskip}{0pt plus 5cm}Point Empire\+\_\+\+Simulator.\+Handlarz.\+zwroc\+Pozycje (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_empire___simulator_1_1_handlarz_ae6c1178490e2a429ece397f5b3a656d9}
+
+
+zwraca pozycje w jakiej znajduje się handlarz 
+
+\begin{DoxyReturn}{Returns}
+Point(\+X,\+Y)
+\end{DoxyReturn}
+\hypertarget{class_empire___simulator_1_1_handlarz_aabded215d71b5fbcfec11027a8bf4593}{\index{Empire\+\_\+\+Simulator\+::\+Handlarz@{Empire\+\_\+\+Simulator\+::\+Handlarz}!zwroc\+Woz@{zwroc\+Woz}}
+\index{zwroc\+Woz@{zwroc\+Woz}!Empire\+\_\+\+Simulator\+::\+Handlarz@{Empire\+\_\+\+Simulator\+::\+Handlarz}}
+\subsubsection[{zwroc\+Woz}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Woz\+Handlarza} Empire\+\_\+\+Simulator.\+Handlarz.\+zwroc\+Woz (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_empire___simulator_1_1_handlarz_aabded215d71b5fbcfec11027a8bf4593}
+
+
+Zwraca to co ma na wozie (Czy to napewno dobry pomysl?) lepiej chyba bedzie jesli kazda kominikacja z wozem bedzie odbywala sie za pomoca handlarza 
+
+\begin{DoxyReturn}{Returns}
+obiekt wozu handlarza
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Paweł/\+Documents/\+Git\+Hub/\+Empire\+\_\+\+Simulator\+\_\+\+V\+S\+\_\+2008/\+Empire\+\_\+\+Simulator/\+Empire\+\_\+\+Simulator/\+Klasy/\+Handlarz/Handlarz.\+cs\end{DoxyCompactItemize}
