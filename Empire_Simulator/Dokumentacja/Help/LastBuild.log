@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shfbBuild product="Sandcastle Help File Builder" version="2014.2.15.0 Beta" projectFile="C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Dokumentacja.shfbproj" started="2014-06-01 18:38:18">
+<buildStep step="Initializing">
+Finding tools...
+The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\&#39;
+Searching for HTML Help 1 compiler...
+Found HTML Help 1 compiler in &#39;C:\Program Files (x86)\HTML Help Workshop\&#39;
+Locating components...
+Using presentation style &#39;VS2010&#39; located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010&#39;
+</buildStep>
+<buildStep step="ClearWorkFolder">
+Clearing working folder...
+</buildStep>
+<buildStep step="ValidatingDocumentationSources">
+Validating and copying documentation source information
+Source: C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Empire_Simulator\bin\Debug\Empire_Simulator.exe
+    Found assembly &#39;C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Empire_Simulator\bin\Debug\Empire_Simulator.exe&#39;
+Source: C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Empire_Simulator.sln
+    Found project &#39;C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Empire_Simulator\Empire_Simulator.csproj&#39;
+Source: C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Empire_Simulator\bin\Debug\Empire_Simulator.vshost.exe
+    Found assembly &#39;C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Empire_Simulator\bin\Debug\Empire_Simulator.vshost.exe&#39;
+Source: C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Empire_Simulator\bin\Debug\Empire_Simulator.xml
+Source: C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Empire_Simulator\Empire_Simulator.XML
+
+Parsing project files
+    Ignoring duplicate assembly file &#39;C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Empire_Simulator\bin\Debug\Empire_Simulator.exe&#39;
+    Ignoring duplicate comments file &#39;C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Empire_Simulator\bin\Debug\Empire_Simulator.XML&#39;
+
+References to include (excluding framework assemblies):
+    AlphaBlendTextBox
+
+Copying XML comments files
+    C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Empire_Simulator\bin\Debug\Empire_Simulator.XML -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Empire_Simulator.XML
+SHFB: Warning BE0063: &#39;C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Empire_Simulator\Empire_Simulator.XML&#39; matches a previously copied comments filename.  The duplicate will be copied to a unique name to preserve the comments it contains.
+    C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Empire_Simulator\Empire_Simulator.XML -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\{49d33181-e52c-4da2-af73-9fafdb847cfe}
+</buildStep>
+<buildStep step="GenerateSharedContent">
+Generating shared content files (en-US, Angielski (Stany Zjednoczone))...
+    Last step completed in 00:00:00.0120
+</buildStep>
+<buildStep step="GenerateApiFilter">
+Generating API filter for MRefBuilder...
+    Last step completed in 00:00:00.0040
+</buildStep>
+<buildStep step="GenerateReflectionInfo">
+Generating reflection information...
+[C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
+Kompilacja rozpocz&#169;a si&#169; 2014-06-01 18:38:18.
+Projekt &quot;C:\Users\Pawe\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\GenerateRefInfo.proj&quot; w w&#169;&#171;le 1 (domylne elementy docelowe).
+PrepareForBuild:
+  Tworzenie katalogu &quot;obj\Debug\&quot;.
+GenerateRefInfo:
+  MRefBuilder (v2014.1.26.0)
+  Copyright c 2006-2014, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2014, Eric Woodruff, All Rights Reserved.
+  Loaded 2 assemblies for reflection and 2 dependency assemblies.
+  Wrote information on 2 namespaces, 6 types, and 11 members
+  Kopiowanie pliku z &quot;reflection.org&quot; do &quot;reflection.all&quot;.
+  XslTransform (v2014.1.26.0)
+  Copyright c 2006-2014, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2014, Eric Woodruff, All Rights Reserved.
+  Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\MergeDuplicates.xsl&#39;.
+Kompilowanie projektu &quot;C:\Users\Pawe\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\GenerateRefInfo.proj&quot; wykonane (domylne elementy docelowe).
+
+Kompilacja powioda si&#169;.
+
+Czas, kt˘ry upynĄ: 00:00:00.87
+    Last step completed in 00:00:01.0115
+</buildStep>
+<buildStep step="TransformReflectionInfo">
+Transforming reflection output...
+[C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
+Kompilacja rozpocz&#169;a si&#169; 2014-06-01 18:38:19.
+Projekt &quot;C:\Users\Pawe\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\TransformManifest.proj&quot; w w&#169;&#171;le 1 (domylne elementy docelowe).
+TransformManifest:
+  XslTransform (v2014.1.26.0)
+  Copyright c 2006-2014, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2014, Eric Woodruff, All Rights Reserved.
+  Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\\ProductionTransforms\ApplyVSDocModel.xsl&#39;.
+  Kopiowanie pliku z &quot;reflection.xml&quot; do &quot;reflection.nofilenames&quot;.
+  XslTransform (v2014.1.26.0)
+  Copyright c 2006-2014, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2014, Eric Woodruff, All Rights Reserved.
+  Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\AddFilenames.xsl&#39;.
+  XslTransform (v2014.1.26.0)
+  Copyright c 2006-2014, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2014, Eric Woodruff, All Rights Reserved.
+  Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\ReflectionToManifest.xsl&#39;.
+Kompilowanie projektu &quot;C:\Users\Pawe\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\TransformManifest.proj&quot; wykonane (domylne elementy docelowe).
+
+Kompilacja powioda si&#169;.
+
+Czas, kt˘ry upynĄ: 00:00:00.51
+    Last step completed in 00:00:00.6354
+</buildStep>
+<buildStep step="GenerateNamespaceSummaries">
+Generating namespace summary information...
+    Last step completed in 00:00:00.0190
+</buildStep>
+<buildStep step="CopyAdditionalContent">
+Copying additional content files...
+No additional content to copy
+    Last step completed in 00:00:00.0020
+</buildStep>
+<buildStep step="MergeTablesOfContents">
+Merging conceptual and additional tables of contents...
+    Last step completed in 00:00:00.0010
+</buildStep>
+<buildStep step="GenerateIntermediateTableOfContents">
+Generating intermediate table of contents file...
+[C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
+Kompilacja rozpocz&#169;a si&#169; 2014-06-01 18:38:20.
+Projekt &quot;C:\Users\Pawe\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\GenerateIntermediateTOC.proj&quot; w w&#169;&#171;le 1 (domylne elementy docelowe).
+GenerateIntermediateTOC:
+  XslTransform (v2014.1.26.0)
+  Copyright c 2006-2014, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2014, Eric Woodruff, All Rights Reserved.
+  Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\\ProductionTransforms\CreateVSToc.xsl&#39;.
+Kompilowanie projektu &quot;C:\Users\Pawe\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\GenerateIntermediateTOC.proj&quot; wykonane (domylne elementy docelowe).
+
+Kompilacja powioda si&#169;.
+
+Czas, kt˘ry upynĄ: 00:00:00.13
+Generating conceptual content intermediate TOC file...
+    Last step completed in 00:00:00.2552
+</buildStep>
+<buildStep step="CreateBuildAssemblerConfigs">
+Creating Sandcastle configuration files...
+    sandcastle.config
+    Last step completed in 00:00:00.2001
+</buildStep>
+<buildStep step="MergeCustomConfigs">
+Merging custom build component configurations
+C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\sandcastle.config
+    Last step completed in 00:00:00.0240
+</buildStep>
+<buildStep step="BuildReferenceTopics">
+Building reference help topics...
+[C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
+Kompilacja rozpocz&#169;a si&#169; 2014-06-01 18:38:20.
+Projekt &quot;C:\Users\Pawe\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\BuildReferenceTopics.proj&quot; w w&#169;&#171;le 1 (domylne elementy docelowe).
+BuildReferenceTopics:
+  BuildAssembler (v2014.1.26.0)
+  Copyright c 2006-2014, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2014, Eric Woodruff, All Rights Reserved.
+  Loading configuration...
+  Processing topics...
+BuildAssembler : warning : ShowMissingComponent: [N:Empire_Simulator] Missing &lt;summary&gt; documentation [C:\Users\Pawe\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Empire_Simulator.FabrykaZasobow.listaZasobow] Missing &lt;returns&gt; documentation [C:\Users\Pawe\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:Empire_Simulator.Test] Missing &lt;summary&gt; documentation [C:\Users\Pawe\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Empire_Simulator.Zasob.#ctor(System.String,System.Int32,System.Int32)] Missing &lt;param name=&quot;nazwa&quot;/&gt; documentation [C:\Users\Pawe\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Empire_Simulator.Zasob.#ctor(System.String,System.Int32,System.Int32)] Missing &lt;param name=&quot;ilosc&quot;/&gt; documentation [C:\Users\Pawe\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Empire_Simulator.Zasob.#ctor(System.String,System.Int32,System.Int32)] Missing &lt;param name=&quot;waga&quot;/&gt; documentation [C:\Users\Pawe\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Empire_Simulator.Zasob.ToString] Missing &lt;summary&gt; documentation [C:\Users\Pawe\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Empire_Simulator.Zasob.ToString] Missing &lt;returns&gt; documentation [C:\Users\Pawe\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Empire_Simulator.Zasob.zmienIloscZasobu(System.Int32)] Missing &lt;param name=&quot;wartosc&quot;/&gt; documentation [C:\Users\Pawe\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Empire_Simulator.Zasob.zwrocWageZasobu] Missing &lt;summary&gt; documentation [C:\Users\Pawe\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Empire_Simulator.Zasob.zwrocWageZasobu] Missing &lt;returns&gt; documentation [C:\Users\Pawe\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [N:Microsoft.VisualStudio.HostingProcess] Missing &lt;summary&gt; documentation [C:\Users\Pawe\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:Microsoft.VisualStudio.HostingProcess.EntryPoint] Missing &lt;summary&gt; documentation [C:\Users\Pawe\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Microsoft.VisualStudio.HostingProcess.EntryPoint.Main] Missing &lt;summary&gt; documentation [C:\Users\Pawe\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\BuildReferenceTopics.proj]
+  Processed 23 topic(s)
+  14 warning(s)
+  CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 3 of 15.
+  CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 3 of 30.
+Kompilowanie projektu &quot;C:\Users\Pawe\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\BuildReferenceTopics.proj&quot; wykonane (domylne elementy docelowe).
+
+Kompilacja powioda si&#169;.
+
+Czas, kt˘ry upynĄ: 00:00:08.58
+    Last step completed in 00:00:08.7486
+</buildStep>
+<buildStep step="CombiningIntermediateTocFiles">
+Combining conceptual and API intermediate TOC files...
+    Last step completed in 00:00:00.0020
+</buildStep>
+<buildStep step="ExtractingHtmlInfo">
+Extracting HTML info for HTML Help 1 and/or website...
+[C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
+Sandcastle Help File Builder, version 2014.2.15.0 Beta
+Copyright c 2006-2014, Eric Woodruff, All Rights Reserved
+E-Mail: Eric@EWoodruff.us
+
+Using LCID &#39;1033&#39;, code page &#39;65001&#39;, encoding charset &#39;UTF-8&#39;.
+
+Processing Help 1 files in C:\Users\Pawe\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1
+Processed 23 HTML files
+Sorting keywords and generating See Also indices
+Saving HTML Help 1 keyword index to C:\Users\Pawe\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Documentation.hhk
+Saving HTML Help 1 table of contents to C:\Users\Pawe\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Documentation.hhc
+    Last step completed in 00:00:00.2912
+</buildStep>
+<buildStep step="CopyStandardHelpContent">
+Copying standard help content...
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\1_404_bullet.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\1_404_bullet.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\2_404_bullet.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\2_404_bullet.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\alert_caution.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\alert_caution.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\alert_note.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\alert_note.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\alert_security.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\alert_security.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\CFW.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\CFW.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\close.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\close.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\favicon.ico -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\favicon.ico
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\footer_slice.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\footer_slice.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\info_icon.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\info_icon.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\note.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\note.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\online_icon.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\online_icon.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\open.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\open.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\pencil.GIF -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\pencil.GIF
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\privclass.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\privclass.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\privdelegate.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\privdelegate.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\privenumeration.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\privenumeration.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\privevent.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\privevent.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\privextension.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\privextension.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\privfield.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\privfield.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\privinterface.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\privinterface.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\privmethod.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\privmethod.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\privproperty.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\privproperty.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\privstructure.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\privstructure.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\protclass.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\protclass.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\protdelegate.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\protdelegate.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\protenumeration.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\protenumeration.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\protevent.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\protevent.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\protextension.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\protextension.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\protfield.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\protfield.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\protinterface.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\protinterface.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\protmethod.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\protmethod.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\protoperator.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\protoperator.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\protproperty.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\protproperty.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\protstructure.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\protstructure.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\pubclass.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\pubclass.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\pubdelegate.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\pubdelegate.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\pubenumeration.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\pubenumeration.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\pubevent.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\pubevent.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\pubextension.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\pubextension.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\pubfield.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\pubfield.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\pubinterface.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\pubinterface.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\pubmethod.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\pubmethod.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\puboperator.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\puboperator.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\pubproperty.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\pubproperty.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\pubstructure.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\pubstructure.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\search.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\search.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\search_bk.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\search_bk.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\security.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\security.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\slMobile.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\slMobile.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\static.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\static.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\tabLeftBG.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\tabLeftBG.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\tabRightBG.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\tabRightBG.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\ui_om_collapse.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\ui_om_collapse.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\ui_om_expand.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\ui_om_expand.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\icons\xna.gif -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\icons\xna.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\scripts\branding.js -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\scripts\branding.js
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\styles\branding-cs-CZ.css -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\styles\branding-cs-CZ.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\styles\branding-de-DE.css -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\styles\branding-de-DE.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\styles\branding-en-US.css -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\styles\branding-en-US.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\styles\branding-es-ES.css -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\styles\branding-es-ES.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\styles\branding-fr-FR.css -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\styles\branding-fr-FR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\styles\branding-it-IT.css -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\styles\branding-it-IT.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\styles\branding-ja-JP.css -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\styles\branding-ja-JP.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\styles\branding-ko-KR.css -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\styles\branding-ko-KR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\styles\branding-pl-PL.css -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\styles\branding-pl-PL.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\styles\branding-pt-BR.css -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\styles\branding-pt-BR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\styles\branding-ru-RU.css -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\styles\branding-ru-RU.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\styles\branding-tr-TR.css -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\styles\branding-tr-TR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\styles\branding-zh-CN.css -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\styles\branding-zh-CN.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\styles\branding-zh-TW.css -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\styles\branding-zh-TW.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2010\styles\branding.css -&gt; C:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\styles\branding.css
+    Last step completed in 00:00:00.2151
+</buildStep>
+<buildStep step="GenerateHelpFormatTableOfContents">
+Generating HTML Help 1 table of contents file...
+    Last step completed in 00:00:00.0010
+</buildStep>
+<buildStep step="GenerateHelpFileIndex">
+Generating HTML Help 1 index file...
+    Last step completed in 00:00:00.0010
+</buildStep>
+<buildStep step="GenerateHelpProject">
+Generating HTML Help 1 project file...
+    Last step completed in 00:00:00.0050
+</buildStep>
+<buildStep step="CompilingHelpFile">
+Compiling HTML Help 1 file...
+[C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
+  Microsoft HTML Help Compiler 4.74.8702
+  
+  
+  
+  Compiling c:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\Documentation.chm
+  
+  
+  
+  
+  
+  Compile time: 0 minutes, 0 seconds
+  
+  25	Topics
+  
+  220	Local links
+  
+  131	Internet links
+  
+  0	Graphics
+  
+  
+  
+  
+  
+  Created c:\Users\Paweł\Documents\GitHub\Empire_Simulator_VS_2008\Empire_Simulator\Dokumentacja\Help\Working\Output\HtmlHelp1\Documentation.chm, 87,245 bytes
+  
+  Compression decreased file by 233,755 bytes.
+  
+    Last step completed in 00:00:00.6504
+</buildStep>
+<buildStep step="CleanIntermediates">
+Removing intermediate files...
+    Last step completed in 00:00:00.0270
+</buildStep>
+<buildStep step="Completed">
+
+Build completed successfully at 06-01-2014 06:38 .  Total time: 00:00:12,6020
+
+</buildStep>
+</shfbBuild>
