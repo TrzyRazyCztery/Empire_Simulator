@@ -1,9 +1,8 @@
 ### Zawartość
 * [Analiza](#analiza)
 * [Opis Klas](#opis-klas)
-* [Wzorce Projektowe](#Wzorce)
-* [Diagram Klas](#diagram klas)
-
+* [Diagram Klas](#diagram-klas)
+* [Wzorce Projektowe](#Wzorce-projektowe)
 
 ## Analiza
 
@@ -66,4 +65,6 @@ Interfejsy:
 Diagram Klas:
 -----------------------------
 ![Alt text](http://i60.tinypic.com/jidcty.jpg)
-<a href="http://pl.tinypic.com?ref=jidcty" target="_blank"><img src="http://i60.tinypic.com/jidcty.jpg" border="0" alt="Image and video hosting by TinyPic"></a>
+
+## Wzorce Projektowe
+=============================
