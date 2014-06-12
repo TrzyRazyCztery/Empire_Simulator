@@ -10,6 +10,7 @@
 
 ## Opis Klas
 =======================
+**Po szczegółowe opisy poniższych metod zapraszam do /Dokumentacja/html/index.html
 * **AktualizacjaHandlarzy**  - Jest to klasa generująca delegaty obsługujące aktualizajcę Handlarzy
 * **AktualizacjaOsad**  - Jest to klasa generująca delegaty obsługujące aktualizajcę Osad
 * **AktualizacjaStanuSwiata**  - Jest to klasa której obiekt jest wstanie zaktualizowac caly stan swiata
@@ -62,5 +63,7 @@ Interfejsy:
 * **IStrategiaHandlu**  -  Interfejs opisujacy jak wyglada wymiana towaru miedzy targiem a handlarzem 
 * **IStrategiaOsady**  - Interfejs strategi osady wymusza metody których używa osada do zaktualizowania swojego statusu tj. stanow magazynowych i populacji, strategie bedą wymienne
  
-
-
+Diagram Klas:
+-----------------------------
+![Alt text](http://i60.tinypic.com/jidcty.jpg)
+<a href="http://pl.tinypic.com?ref=jidcty" target="_blank"><img src="http://i60.tinypic.com/jidcty.jpg" border="0" alt="Image and video hosting by TinyPic"></a>
