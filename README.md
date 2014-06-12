@@ -8,8 +8,8 @@
 ## Analiza
 
 
-## Opis Klas
-
+Opis Klas
+=======================
 * **AktualizacjaHandlarzy**  - Jest to klasa generująca delegaty obsługujące aktualizajcę Handlarzy
 * **AktualizacjaOsad**  - Jest to klasa generująca delegaty obsługujące aktualizajcę Osad
 * **AktualizacjaStanuSwiata**  - Jest to klasa której obiekt jest wstanie zaktualizowac caly stan swiata
