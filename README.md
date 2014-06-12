@@ -1,5 +1,5 @@
 ### Zawartość
-* [Analiza](#Analiza)
+* [Analiza](#analiza)
 * [Opis Klas](#Opis)
 * [Wzorce Projektowe](#Wzorce)
 * [Diagram Klas](#diagram klas)
@@ -23,7 +23,7 @@ Opis Klas
 * **GeneratorSwiata**  - Jest to klasa której obiekt potrafi wygenerowac swiat na podstawie podanej strategi
  
 * **Handlarz**  -  Tworzy obiekty handlarza czyli bytu podróżującego pomiędzy Osadami przewożąc surowce
-* **Magazyn**  - Magazyn jest obiektem posiadanym przez osadę, i przetrzymującym w swoich polach ilośći zasobów które posiada Osada
+* **Magazyn**  - Magazyn jest obiektem posiadanym przez osadę, i przetrzymującym w swoich polach ilośći zasobów które posiada
 * **Osada**  - Klasa Tworzaca obiekt osady
 * **Targ**  - Targ posiadany przez miasto i uzywany do komunikacji miedzy handlarzami a osadą
 
@@ -51,7 +51,8 @@ Moje przykładowe strategie:
 * **PodstawowaStrategiaHandlarza**
 * **PodstawowaStrategiaHandlu**
 * **PodstawowaStrategiaOsady**
- Są to przygotowane przezemnie przykładowe strategie tego jak powinna działać aktualizacja świata,handlarzy itp
+
+Są to przygotowane przezemnie przykładowe strategie tego jak powinna działać aktualizacja świata,handlarzy itp
  
 Interfejsy:
 ---------------------------
