@@ -1,10 +1,15 @@
 ### Zawartość
+* [Opis](#opis)
 * [Analiza](#analiza)
 * [Opis Klas](#opis-klas)
 * [Diagram Klas](#diagram-klas)
 * [Wzorzec Projektowy](#wzorzec-projektowy)
 
+## Opis
+Empire Simulator jest to projekt który ma na celu uwidocznienie zmian zachodzących w teoretycznym świecie złożonym z kilku osad i handlarzy podróżujących pomiedzy nimi i przewożącymi surowce. Bardzo zaciekawił mnie problem tego jak najoptymalniej wybierać sposób dobierania celu podróży handlarza i sposób wymiany towarów by przy jak najmniejszej liczbnie handlarzy "utrzymać przy życiu" to znaczy równomiernie rozprowadzać surowce, gdzie każda Osada produkuje jeden surowiec. By zmienić sposób handlu, wyszukiwania celu czy ilość generowanych osad lub handlarzy wystarczy utworzyc swój obiekt strategi implementujący interfejsy i zmienić nazwę obiektu strategi na swoją w obiekcie GenerowaniaŚwiata
+
 ## Analiza
+Program na podstawie strategii generowania świata tworzy obiekty osad, handlarzy i wszystkie im potrzebne obiekty poboczne korzystając z fabryk osad, handlarzy itp. Nastepnie tworzone są delegaty które uruchamiają metode aktualizacji stanu każdego z handlarzy i każdej z osad, jest to gotowy działający "szkielet".  Dalej Tworzone jest okienko symulatora na które za pomocą Generatora mapy który nanosi byty w postaci handlarzy i osad na mapę korzystajac z obiektu świata. Gdy Mapa jest gotowa timer zgodnie z ustalonym interwałem uruchamia delegaty oraz odświeża mapę korzystając z AktualizatoraMapy który sprawdza czy jakis handlarz zmienił pozycje lub osada zmieniła swój rozmiar i odpowiednio przesówa obiekty na mapie.
 
 
 ## Opis Klas
