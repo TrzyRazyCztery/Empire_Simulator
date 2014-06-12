@@ -1,6 +1,6 @@
 ### Zawartość
 * [Analiza](#analiza)
-* [Opis Klas](#opis)
+* [Opis Klas](#opis-klas)
 * [Wzorce Projektowe](#Wzorce)
 * [Diagram Klas](#diagram klas)
 
