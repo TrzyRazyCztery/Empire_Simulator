@@ -2,14 +2,14 @@
 * [Analiza](#analiza)
 * [Opis Klas](#opis-klas)
 * [Diagram Klas](#diagram-klas)
-* [Wzorce Projektowe](#wzorce-projektowe)
+* [Wzorzec Projektowy](#wzorzec-projektowy)
 
 ## Analiza
 
 
 ## Opis Klas
 =======================
-**Po szczegółowe opisy poniższych metod zapraszam do /Dokumentacja/html/index.html
+**Po szczegółowe opisy poniższych metod zapraszam do /Dokumentacja/html/index.html**
 * **AktualizacjaHandlarzy**  - Jest to klasa generująca delegaty obsługujące aktualizajcę Handlarzy
 * **AktualizacjaOsad**  - Jest to klasa generująca delegaty obsługujące aktualizajcę Osad
 * **AktualizacjaStanuSwiata**  - Jest to klasa której obiekt jest wstanie zaktualizowac caly stan swiata
@@ -66,5 +66,6 @@ Diagram Klas:
 -----------------------------
 ![Alt text](http://i60.tinypic.com/jidcty.jpg)
 
-## Wzorce Projektowe
+## Wzorzec Projektowy
 =============================
+* **Strategia**
