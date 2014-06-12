@@ -379,64 +379,6 @@
             i koryguje te zmiany na mapie
             </summary>
         </member>
-        <member name="T:Empire_Simulator.GeneratorMapy">
-            <summary>
-            Obiekt generatora mapy pozwala na naniesienie osad,handlarzy i tła na ramkę gry
-            </summary>
-        </member>
-        <member name="M:Empire_Simulator.GeneratorMapy.dodajTlo(Empire_Simulator.OknoGry)">
-            <summary>
-            podajac okno metoda naniesie aktualny stan swiata włącznie z tłem
-            </summary>
-            <param name="okno"></param>
-        </member>
-        <member name="M:Empire_Simulator.GeneratorMapy.dodajPoleOpisuOsady">
-            <summary>
-            nanosi okno ktore bedzie wyswietlalo opisy osad
-            </summary>
-        </member>
-        <member name="M:Empire_Simulator.GeneratorMapy.dodajOsady(Empire_Simulator.Swiat)">
-            <summary>
-            wewnetrzna metoda generator Tworzaca słownik osada : pictureBox osady
-            </summary>
-            <param name="swiat"></param>
-        </member>
-        <member name="M:Empire_Simulator.GeneratorMapy.dodajHandlarzy(Empire_Simulator.Swiat)">
-            <summary>
-            wewnetrzna metoda generatora Tworzaca słownik handlarz : pictureBox handalrza
-            </summary>
-            <param name="swiat"></param>
-        </member>
-        <member name="M:Empire_Simulator.GeneratorMapy.naniesOsadyNaMape(System.Windows.Forms.PictureBox)">
-            <summary>
-            wewnetrzna metoda generatora nanosząca osady na tło mapy
-            </summary>
-            <param name="swiat"></param>
-        </member>
-        <member name="M:Empire_Simulator.GeneratorMapy.naniesHandlarzyNaMape(System.Windows.Forms.PictureBox)">
-            <summary>
-            wewnetrzna metoda generatora nanoszaca handlarzy na tło mapy
-            </summary>
-            <param name="swiat"></param>
-        </member>
-        <member name="M:Empire_Simulator.GeneratorMapy.generujAktualizatoraMapy">
-            <summary>
-            na podstawie mapy generuje obiekt jej aktualizatora
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Empire_Simulator.GeneratorMapy.wypisywanieStanuWioski(System.Object,System.Windows.Forms.MouseEventArgs)">
-            <summary>
-            zdarzenie do obsługi wypiswania stanu wioski po kliknieciu na nią w textboxie wygenerowanym w dodajPoleOpisuOsady()
-            </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
-        </member>
-        <member name="T:Empire_Simulator.TextBoxLabel">
-            <summary>
-            Kod skopiowany z iternetu obsługujący przeźroczystość textBoxów 
-            </summary>
-        </member>
         <member name="T:Empire_Simulator.OknoGry">
             <summary>
             Jest to główne okno gry
