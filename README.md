@@ -1,6 +1,6 @@
 ### Zawartość
 * [Analiza](#analiza)
-* [Opis Klas](#opis)
+* [Opis Klas](#opis klas)
 * [Wzorce Projektowe](#Wzorce)
 * [Diagram Klas](#diagram klas)
 
@@ -8,7 +8,7 @@
 ## Analiza
 
 
-Opis Klas
+## Opis Klas
 =======================
 * **AktualizacjaHandlarzy**  - Jest to klasa generująca delegaty obsługujące aktualizajcę Handlarzy
 * **AktualizacjaOsad**  - Jest to klasa generująca delegaty obsługujące aktualizajcę Osad
