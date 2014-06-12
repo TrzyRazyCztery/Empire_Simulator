@@ -45,16 +45,16 @@
 
 
 Moje przykładowe strategie: 
-===========================
-* **PodstawowaStrategiaAktualizacjiSwiata
-* **PodstawowaStrategiaGenerowaniaSwiata
-* **PodstawowaStrategiaHandlarza
-* **PodstawowaStrategiaHandlu
-* **PodstawowaStrategiaOsady
+---------------------------
+* **PodstawowaStrategiaAktualizacjiSwiata**
+* **PodstawowaStrategiaGenerowaniaSwiata**
+* **PodstawowaStrategiaHandlarza**
+* **PodstawowaStrategiaHandlu**
+* **PodstawowaStrategiaOsady**
  Są to przygotowane przezemnie przykładowe strategie tego jak powinna działać aktualizacja świata,handlarzy itp
  
 Interfejsy:
-===========================
+---------------------------
 * **IStrategiaAktualizacjiSwiata**  - Interfejs Aktualizacji swiata ma metody zwracajace co ile dni handlarz zmienia swój stan, podobnie tyczy się to Osady
 * **IStrategiaGenerowaniaSwiata**  -	Jest to ogolny interfejs generowania swiata, ktory mówi o tym ile osad wygenerowac na mapie, ilu handlarzy,i jaka pojemność bedzie miał wóz handlarze podaje też z jakich strategi handlarza,handlu i Osady bedziemy korzystac
 * **IStrategiaHandlarza**  - Interfejs mówiący o tym jak wyznaczać nowy cel podróży dla handlarza oraz w jaki sposob sie przemieszcza
