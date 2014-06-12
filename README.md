@@ -2,7 +2,7 @@
 * [Analiza](#analiza)
 * [Opis Klas](#opis-klas)
 * [Diagram Klas](#diagram-klas)
-* [Wzorce Projektowe](#Wzorce-projektowe)
+* [Wzorce Projektowe](#wzorce-projektowe)
 
 ## Analiza
 
