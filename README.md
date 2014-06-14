@@ -14,7 +14,6 @@ Program na podstawie strategii generowania świata tworzy obiekty osad, handlarz
 
 ## Opis Klas
 =======================
-**Po szczegółowe opisy poniższych metod zapraszam do /Dokumentacja/html/index.html**
 * **AktualizacjaHandlarzy**  - Jest to klasa generująca delegaty obsługujące aktualizajcę Handlarzy
 * **AktualizacjaOsad**  - Jest to klasa generująca delegaty obsługujące aktualizajcę Osad
 * **AktualizacjaStanuSwiata**  - Jest to klasa której obiekt jest wstanie zaktualizowac caly stan swiata
