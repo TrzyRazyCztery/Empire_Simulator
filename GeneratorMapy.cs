@@ -9,7 +9,7 @@ using ZBobb;
 namespace Empire_Simulator
 {
     class GeneratorMapy
-    {
+    { 
 
         private Dictionary<Osada, PictureBox> osadyNaMapie;
         private Dictionary<Handlarz, PictureBox> handlarzeNaMapie;
